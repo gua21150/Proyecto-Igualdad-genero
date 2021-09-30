@@ -10,10 +10,10 @@ package ProyectoPOO.src;//agrupando las clases en paquetes
  ***********************************************/
 public class Credenciales {
     //atributos
-    private String username;
-    private String password;
-    private String question;
-    private String answer;
+    private String username; //Nombre de usuario del usuario de la página web
+    private String password; //Clave de seguridad para accesar a su perfil
+    private String question; //Pregunta de seguridad en caso se quiera recuperar la clave de seguridad
+    private String answer; //Respuesta a la pregunta de seguridad
 
     /********************************
      * Constructor sin parámetros
