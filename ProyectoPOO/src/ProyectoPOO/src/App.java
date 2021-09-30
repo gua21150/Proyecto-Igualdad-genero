@@ -1,8 +1,9 @@
-package ProyectoPOO;
+package ProyectoPOO.src;
 
-public class app {
+public class App {
+    
     public static void main(String[] args) throws Exception{
 
-        
-    }
+    
+}
 }
