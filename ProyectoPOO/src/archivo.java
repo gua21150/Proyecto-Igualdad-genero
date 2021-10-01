@@ -1,3 +1,5 @@
+package ProyectoPOO.src;
+
 /**
   * Clase publica Archivo. 
   * Se almacenan los datos del usuario en archivos y se hace uso de escritura y lectura de file.

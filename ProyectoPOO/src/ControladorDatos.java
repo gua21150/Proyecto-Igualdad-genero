@@ -1,3 +1,4 @@
+package ProyectoPOO.src;
 import java.util.Scanner;
 /**
  * El objetivo de esta clase es validar los datos ingresados del usuario así como solicitar los datos. 
@@ -25,7 +26,7 @@ public class ControladorDatos {
      * @param pregunta: ¿Qué dato desea obtener el usuario?
      * @return dato: respuesta del usuario
      */
-    public String SolicitarString(String pregunta) {
+    public String solicitarString(String pregunta) {
         Scanner scanner = new Scanner(System.in); // Scanner para obtener los datos de consola
         String dato;                              // variable que guarda el String de respuesta
         boolean continuar = true;                 // bandera para continuar o no con el proceso 
