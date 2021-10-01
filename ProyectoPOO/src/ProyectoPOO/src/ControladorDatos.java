@@ -1,3 +1,5 @@
+package ProyectoPOO.src;
+
 import java.util.Scanner;
 /**
  * El objetivo de esta clase es validar los datos ingresados del usuario así como solicitar los datos. 
