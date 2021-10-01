@@ -7,6 +7,12 @@ import java.util.Scanner;
  */
 public class ControladorDatos {
     /**
+     * Constructor vacío ya que no se deben de instanciar objetos de esta clase.
+     */
+    private ControladorDatos(){
+        // no se instancian datos de el
+    } 
+    /**
      * Validar que el String ingresado no sea vacío o con un tamaño muy grande
      * @param value String que evalua para verificar que el dato es correcto
      * @return true: si el dato cumple con la especificación, false: si el dato no cumple con la especificación

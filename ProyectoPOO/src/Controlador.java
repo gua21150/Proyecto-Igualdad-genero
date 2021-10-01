@@ -63,9 +63,8 @@ public class Controlador{
 
     public void registrarUsuarios() {
         cargarDatos();
-        
         if(validarUsuario("correo")){
-            // do something 
+            
         }        
     }
 }
