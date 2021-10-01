@@ -1,6 +1,7 @@
 package ProyectoPOO.src;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Scanner;
 /**
  * El objetivo de esta clase es mantener la integridad de los datos del modelo MVC.
  * Todos sus métodos son de tipo static porque no se instancian objetos de esta clase.
@@ -95,18 +96,18 @@ public class Controlador{
      * respuesta pregunta de seguridad.
      * Si el correo ingresado está repetido, se le indica.
      */
-    public static void registrarUsuarios() {
+    public static void registrarUsuarios(Scanner scanner) {
         cargarDatos(); // se cargan los datos a las listas creadas
         System.out.println("Tus datos no serán dado a terceros, al menos que solicites ayuda");
-        String respuesta = ControladorDatos.solicitarString("¿Cuál es su correo de inicialización?");
+        String respuesta = ControladorDatos.solicitarString("¿Cuál es su correo de inicialización?", scanner);
         if(!validarUsuario(respuesta)){
             correo = respuesta; // valida que el correo no esté repetido, de no estar repetido, solicitará el resto de datos
-            nombre = ControladorDatos.solicitarString("Ingresa tu nombre completo");
-            telef = ControladorDatos.solicitarString("¿Cuál es tu numero de telefono?");
-            user = ControladorDatos.solicitarString("Ingresa tu nombre de usuario");
-            password = ControladorDatos.solicitarString("Ingresa tu contraseña");
-            question = ControladorDatos.solicitarString("Ingresa qué debemos de preguntarte cuando quieras recuperar tu contraseña.\nEste es un factor de seguridad.");
-            answer = ControladorDatos.solicitarString("Ingresa la respuesta a tu pregunta");
+            nombre = ControladorDatos.solicitarString("Ingresa tu nombre completo", scanner);
+            telef = ControladorDatos.solicitarString("¿Cuál es tu numero de telefono?", scanner);
+            user = ControladorDatos.solicitarString("Ingresa tu nombre de usuario", scanner);
+            password = ControladorDatos.solicitarString("Ingresa tu contraseña", scanner);
+            question = ControladorDatos.solicitarString("Ingresa qué debemos de preguntarte cuando quieras recuperar tu contraseña.\nEste es un factor de seguridad.", scanner);
+            answer = ControladorDatos.solicitarString("Ingresa la respuesta a tu pregunta", scanner);
             credenciales.add(new Credenciales(user, password, question, answer)); // creación de credencial
             usuariosRegistrados.add(new Usuario(nombre, telef, correo, credenciales.get(credenciales.size()-1))); // creación de usuario
             // hacer actualizacion de escritura de datos
@@ -120,9 +121,9 @@ public class Controlador{
      * Realiza el proceso de inicio de sesión del usuario.
      * Se pide su username y su contraseña para ser buscado entre los datos ingresados al sistema.
      */
-    public static void iniciarSesion() {
-        String inicio = ControladorDatos.solicitarString("Ingresa tu nombre de usuario");
-        password = ControladorDatos.solicitarString("Ingresa tu contraseña");
+    public static void iniciarSesion(Scanner scanner) {
+        String inicio = ControladorDatos.solicitarString("Ingresa tu nombre de usuario", scanner);
+        password = ControladorDatos.solicitarString("Ingresa tu contraseña", scanner);
         cargarDatos(); // en caso que se haya hecho una actualización en el archivo, se actualizan los datos actuales.
         for (Credenciales credenciales2 : credenciales) {
             if(credenciales2.getUsername().equals(inicio)) {
@@ -132,7 +133,7 @@ public class Controlador{
                     System.out.println("Contraseña incorrecta\n¿Deseas cambiar tu contraseña?");
                     System.out.println("1. Sí");
                     System.out.println("2. No");
-                    int respuesta = ControladorDatos.solicitarInt("-------");
+                    int respuesta = ControladorDatos.solicitarInt("-------", scanner);
                     if(respuesta==1) {
                         // no sé cómo proseguir 
                     }

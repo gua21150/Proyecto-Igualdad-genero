@@ -41,8 +41,7 @@ public class ControladorDatos {
      * @param pregunta: ¿Qué dato desea obtener el usuario?
      * @return dato: respuesta del usuario
      */
-    public static String solicitarString(String pregunta) {
-        Scanner scanner = new Scanner(System.in); // Scanner para obtener los datos de consola
+    public static String solicitarString(String pregunta, Scanner scanner) {        
         String dato;                              // variable que guarda el String de respuesta
         boolean continuar = true;                 // bandera para continuar o no con el proceso 
         do{            
@@ -60,8 +59,8 @@ public class ControladorDatos {
      * @param pregunta: ¿Qué dato se desea obtener del usuario?
      * @return dato: respuesta del usuario
      */
-    public static int solicitarInt(String pregunta){
-        Scanner scanner = new Scanner(System.in);
+    public static int solicitarInt(String pregunta, Scanner scanner){
+        
         String dato;                                // string donde se guarda la respuesta del scanner
         boolean continuar = true;                   // bandera del ciclo while
         int respuesta=0;                            // donde se guarda la respuesta numerica entera

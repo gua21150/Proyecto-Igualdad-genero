@@ -25,7 +25,9 @@ public class archivo{
      * Se encuentra vacio ya que su funcion es poder crear un objeto de la clase para poder utilizar sus metodos en otras clases.
      * @return no hace
      */
-public archivo(){}
+public archivo(){
+    // información ya dada
+}
 
 /**
      * Método lectura
@@ -58,8 +60,7 @@ public static List<String> Lectura(String nombre) throws IOException {
         } catch(Exception e)
         {
             System.out.println("No se ha encontrado el texto " + nombre); // excepción 
-        } 
-          
+        }           
         return datos; // retorno de la lista info con los elementos leídos.
     }
 
