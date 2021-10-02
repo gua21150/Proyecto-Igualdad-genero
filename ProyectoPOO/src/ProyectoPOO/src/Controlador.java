@@ -113,6 +113,8 @@ public class Controlador{
             credenciales.add(new Credenciales(user, password, question, answer)); // creación de credencial
             usuariosRegistrados.add(new Usuario(nombre, telef, correo, credenciales.get(credenciales.size()-1))); // creación de usuario
             // hacer actualizacion de escritura de datos
+            archivo.Escritura(usuariosRegistrados);
+            archivo.EscrituraCredenciales(credenciales);
             System.out.println("Usuario correctamente creado");
         } else {
             System.out.println("Lo sentimos ese correo ya está asociado a una cuenta.\nIntenta con otro correo o iniciar sesión");
