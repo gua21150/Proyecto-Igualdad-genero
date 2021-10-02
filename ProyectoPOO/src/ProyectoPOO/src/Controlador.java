@@ -7,6 +7,7 @@ import java.util.Scanner;
  * El objetivo de esta clase es mantener la integridad de los datos del modelo MVC.
  * Todos sus métodos son de tipo static porque no se instancian objetos de esta clase.
  * @author Mariel Alejandra Guamuche Recinos 2115
+ * @author coauthor: Pedro Javier Marroquín Abrego 21801
  * @version 1.1 01/10/2021
  */
 public class Controlador{
@@ -136,9 +137,40 @@ public class Controlador{
                     System.out.println("2. No");
                     int respuesta = ControladorDatos.solicitarInt("-------", scanner);
                     if(respuesta==1) {
-                        // no sé cómo proseguir 
+                        recuperarContrasena(credenciales2.getUsername(), scanner); 
+                    }else{
+                        break;
                     }
                 }
+            }else{
+                System.out.println("No existe este usuario.");
+            }
+        }
+    }
+    /**
+     * Ayuda al usuario a recuperar su contraseña
+     * Pide el usuario y luego revisa la pregunta y respuesta de seguridad
+     * @param usuario Usuario al que se cambiará la contraseña
+     * @param scanner Scanner que se usará para pedir ingresos de datos
+     */
+    public static void recuperarContrasena(String usuario, Scanner scanner)
+    {
+        for (Credenciales credenciales2: credenciales)
+        {
+            if(credenciales2.getUsername().equals(usuario))
+            {
+                System.out.println(credenciales2.getQuestion());
+                String respuesta = ControladorDatos.solicitarString("Ingrese la respuesta a su pregunta de seguridad", scanner);
+                if(credenciales2.getAnswer().equals(respuesta))
+                {
+                    String nueva_contrasena = ControladorDatos.solicitarString("Ingrese su nueva contraseña", scanner);
+                    credenciales2.setPassword(nueva_contrasena);
+                    System.out.println("Se ha guardado su nueva contraseña exitosamente.");
+                }else{
+                    System.out.println("¡Respuesta incorrecta!");
+                }
+            }else{
+                System.out.println("No existe este usuario.");
             }
         }
     }
