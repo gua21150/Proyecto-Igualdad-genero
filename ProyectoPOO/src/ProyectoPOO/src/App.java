@@ -11,12 +11,12 @@ public class App {
             while(opcion!=6) {
                 System.out.println("\n-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*");
                 System.out.println("Bienvenido a SIMULADOR por favor revisa nuestras páginas dedicadas a la igualdad");
-                System.err.println("1. Página de inicio");
-                System.err.println("2. Actividades");
-                System.err.println("3. Lecturas");
-                System.err.println("4. Registrarse");
-                System.err.println("5. Iniciar sesión");
-                System.err.println("6. Salir del simulador");
+                System.out.println("1. Página de inicio");
+                System.out.println("2. Actividades");
+                System.out.println("3. Lecturas");
+                System.out.println("4. Registrarse");
+                System.out.println("5. Iniciar sesión");
+                System.out.println("6. Salir del simulador");
                 opcion = ControladorDatos.solicitarInt("Seleccione la opción del menú", scanner);
 
                 switch(opcion) {
@@ -29,7 +29,7 @@ public class App {
                     case 3: 
                         System.out.println("Lecturas sobre igualdad de género");
                     break;
-                    case 4: 
+                    case 4:                         
                         Controlador.registrarUsuarios(scanner); 
                         System.out.println("Se ha iniciado sesión");
                     break;

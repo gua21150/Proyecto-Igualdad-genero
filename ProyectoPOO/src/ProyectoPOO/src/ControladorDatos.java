@@ -27,6 +27,11 @@ public class ControladorDatos {
         return correcto;
     }
 
+    /**
+     * Valida que el string ingresado por el usuario sea un número entero
+     * @param value: entrada del usuario
+     * @return: true: si el dato es un numero entero, false si el dato no es un número entero.
+     */
     private static boolean isInt(String value) {            
         try {
             Integer.parseInt(value);
