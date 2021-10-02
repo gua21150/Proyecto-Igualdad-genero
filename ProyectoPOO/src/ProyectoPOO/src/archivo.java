@@ -37,6 +37,7 @@ public archivo(){
      * @throws IOException La excepción será levantada en caso de que no se ha encontrado el archivo especificado.
      */
 
+
 public static List<String> Lectura(String nombre) throws IOException {
 
     File file;          // archivo de texto 
@@ -71,7 +72,7 @@ public static List<String> Lectura(String nombre) throws IOException {
      * @return crea un archivo txt con los datos en la carpeta del proyecto
      * @throws FileNotFoundException La excepción será levantada en caso de que no se ha encontrado el archivo especificado.
      */
-public void Escritura(){
+public static void Escritura(ArrayList<Usuario>usuarioR){
     // se crea el archivo que contendra  la informacion del programa
     File archivo;
     PrintWriter escribir;
@@ -86,12 +87,12 @@ public void Escritura(){
         {
           try{
             escribir=new PrintWriter(archivo);
-            escribir.println("Los que se encuentran en la memoria RAM SDR son: \n");
+            escribir.println("Los datos del usuario son: \n");
             //se recorre la lista para agregar los elementos del arreglo al archivo y escribirlos en este.
-            /*for(int i=0;i<memoriaSDR.size();i++)
+            for(int i=0;i<usuarioR.size();i++)
             {
-              escribir.println(memoriaSDR.get(i).getPrograma() +","+ memoriaSDR.get(i).getPeso() + ","+ memoriaSDR.get(i).getTiempoe());
-            }*/
+              escribir.println(usuarioR.get(i).getnombre() +","+ usuarioR.get(i).gettelefono() + ","+ usuarioR.get(i).getcorreo());
+            }
             escribir.close();
         }catch(FileNotFoundException ex){
             ex.printStackTrace();
@@ -104,11 +105,11 @@ public void Escritura(){
         // en caso de que se haya creado el archivo se escriben los datos que contendra el archivo con PrintWriter
         try{
             escribir=new PrintWriter(archivo);
-            escribir.println("Los que se encuentran en la memoria RAM SDR son: \n");
-           /* for(int i=0;i<memoriaSDR.size();i++)
+            escribir.println("Los del usuario son: \n");
+           for(int i=0;i<usuarioR.size();i++)
             {
-              escribir.println(memoriaSDR.get(i).getPrograma() +","+ memoriaSDR.get(i).getPeso() + ","+ memoriaSDR.get(i).getTiempoe());
-            }*/
+              escribir.println(usuarioR.get(i).getnombre() +","+ usuarioR.get(i).gettelefono() + ","+ usuarioR.get(i).getcorreo());
+            }
             escribir.close();
         }catch(FileNotFoundException ex){
             ex.printStackTrace();
@@ -117,6 +118,60 @@ public void Escritura(){
         
     }
 }
+
+/**
+     * Método Escritura
+     * Este método de escritura permite guardar en un archivo externo en formato txt con los datos ingresados de todos los usuarios
+     * tanto como su nombre completo, correo electrónico, contraseña , telefeno , credenciales y etc.
+     * @return crea un archivo txt con los datos en la carpeta del proyecto
+     * @throws FileNotFoundException La excepción será levantada en caso de que no se ha encontrado el archivo especificado.
+     */
+    public static void EscrituraCredenciales(ArrayList<Credenciales>credenciales){
+        // se crea el archivo que contendra  la informacion del programa
+        File archivo;
+        PrintWriter escribir;
+            // se crea el destino y nombre dle archivo a generar
+        archivo = new File("Credenciales.txt");
+        if(!archivo.exists())
+        {
+            // se utiliza un try and catch para obtener posibles excepciones a partir de la utilizacion de archivos
+            try {
+               archivo.createNewFile(); // se crea el archivo
+            } catch (Exception e) // se captura la posible excepcion
+            {
+              try{
+                escribir=new PrintWriter(archivo);
+                escribir.println("Las credenciales del usuario son: \n");
+                //se recorre la lista para agregar los elementos del arreglo al archivo y escribirlos en este.
+                for(int i=0;i<credenciales.size();i++)
+                {
+                  escribir.println(credenciales.get(i).getUsername() +","+ credenciales.get(i).getPassword() + ","+ credenciales.get(i).getQuestion()+ ","+ credenciales.get(i).getAnswer());
+                }
+                escribir.close();
+            }catch(FileNotFoundException ex){
+                ex.printStackTrace();
+            }
+            
+            }
+        }
+        else
+        {
+            // en caso de que se haya creado el archivo se escriben los datos que contendra el archivo con PrintWriter
+            try{
+                escribir=new PrintWriter(archivo);
+                escribir.println("Las credenciales de seguridad del usuario son: \n");
+               for(int i=0;i<credenciales.size();i++)
+                {
+                    escribir.println(credenciales.get(i).getUsername() +","+ credenciales.get(i).getPassword() + ","+ credenciales.get(i).getQuestion()+ ","+ credenciales.get(i).getAnswer());
+                }
+                escribir.close();
+            }catch(FileNotFoundException ex){
+                ex.printStackTrace();
+            }
+            
+            
+        }
+    }
 
 }
 
