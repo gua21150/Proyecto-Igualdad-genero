@@ -155,7 +155,7 @@ public class Controlador{
      * @param usuario Usuario al que se cambiará la contraseña
      * @param scanner Scanner que se usará para pedir ingresos de datos
      */
-    public static void recuperarContrasena(String usuario, Scanner scanner)
+    private static void recuperarContrasena(String usuario, Scanner scanner)
     {
         for (Credenciales credenciales2: credenciales)
         {
