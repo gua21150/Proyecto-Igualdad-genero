@@ -6,7 +6,7 @@ package ProyectoPOO.src;//agrupando las clases en paquetes
  * página web
  * 
  * @author Pedro Javier Marroquín Abrego 21801
- * @version 1.0
+ * @version 1.0 29/09/2021
  ***********************************************/
 public class Credenciales {
     //atributos
