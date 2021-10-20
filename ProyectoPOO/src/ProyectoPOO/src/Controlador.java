@@ -56,7 +56,7 @@ public class Controlador{
             }
 
             temporal.clear(); // se limpia el arreglo antes de volver a utilizarlo
-            leerDatos(temporal, "Usuarios.txt"); // ahora el arraylist temporal tendrá los datos del archivo usuarios.txt
+            leerDatos(temporal, "Usuario.txt"); // ahora el arraylist temporal tendrá los datos del archivo usuarios.txt
             
             for (String string : temporal) {                
                nombre = string.split(",",3)[0].strip();    

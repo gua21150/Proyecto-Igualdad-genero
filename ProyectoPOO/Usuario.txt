@@ -1,3 +1,0 @@
-Los del usuario son: 
-
-perro ,55555555,PERRO.GMAIL
