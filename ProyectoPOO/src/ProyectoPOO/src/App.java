@@ -11,6 +11,8 @@ import javafx.stage.Stage;
 public class App extends Application {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
+        
+        
         try {
             
             int opcion = 0;
@@ -28,6 +30,7 @@ public class App extends Application {
                 switch(opcion) {
                     case 1:
                         System.out.println("Aquí hay información de nuestra página de inicio como nuestros valores, misión y visión");
+
                     break;
                     case 2: 
                         System.out.println("Actividades para conocer sobre igualdad de género");

@@ -1,3 +1,0 @@
-Los del usuario son: 
-
-Perro,123,correo@prueba.com
