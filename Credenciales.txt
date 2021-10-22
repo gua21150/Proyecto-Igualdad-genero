@@ -1,1 +1,3 @@
 perro123,123,animal favorito,perro
+perro123,123,animal favorito,perro
+pedro,XD,quien,yo

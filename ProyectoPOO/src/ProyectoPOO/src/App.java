@@ -66,7 +66,7 @@ public class App extends Application {
             stage.show();
         }catch(Exception e)
         {
-            System.out.println("algo fallo"+e.getMessage());//throw e;
+            System.out.println("algo fallo: "+e.getMessage());//throw e;
         }
     }
 }

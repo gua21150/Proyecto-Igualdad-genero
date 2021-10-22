@@ -126,17 +126,21 @@ public class Controlador{
      * Se pide su username y su contraseña para ser buscado entre los datos ingresados al sistema.
      */
     public static void iniciarSesion(String usuario, String password) {
+        boolean match = false;
         cargarDatos(); // en caso que se haya hecho una actualización en el archivo, se actualizan los datos actuales.
         for (Credenciales credenciales2 : credenciales) {
             if(credenciales2.getUsername().equals(usuario)) {
                 if (credenciales2.getPassword().equals(password)) {
                     System.out.println("Hola " + credenciales2.getUsername() + ", es bueno verte de nuevo");
-                } else {
-                    break; //reemplazar con más código después
+                    match = true;
+                    break;
                 }
-            }else{
-                System.out.println("No existe este usuario.");
+                //tiene que redireccionar a recuperar contraseña si lo elige el usuario
             }
+        }
+        if(match == false)
+        {
+            System.out.println("No existe el usuario o la contraseña es inválida");
         }
     }
     /**
