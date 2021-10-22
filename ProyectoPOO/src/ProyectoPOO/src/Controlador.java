@@ -125,24 +125,14 @@ public class Controlador{
      * Realiza el proceso de inicio de sesión del usuario.
      * Se pide su username y su contraseña para ser buscado entre los datos ingresados al sistema.
      */
-    public static void iniciarSesion(Scanner scanner) {
-        String inicio = ControladorDatos.solicitarString("Ingresa tu nombre de usuario", scanner);
-        password = ControladorDatos.solicitarString("Ingresa tu contraseña", scanner);
+    public static void iniciarSesion(String usuario, String password) {
         cargarDatos(); // en caso que se haya hecho una actualización en el archivo, se actualizan los datos actuales.
         for (Credenciales credenciales2 : credenciales) {
-            if(credenciales2.getUsername().equals(inicio)) {
+            if(credenciales2.getUsername().equals(usuario)) {
                 if (credenciales2.getPassword().equals(password)) {
                     System.out.println("Hola " + credenciales2.getUsername() + ", es bueno verte de nuevo");
                 } else {
-                    System.out.println("Contraseña incorrecta\n¿Deseas cambiar tu contraseña?");
-                    System.out.println("1. Sí");
-                    System.out.println("2. No");
-                    int respuesta = ControladorDatos.solicitarInt("-------", scanner);
-                    if(respuesta==1) {
-                        recuperarContrasena(credenciales2.getUsername(), scanner); 
-                    }else{
-                        break;
-                    }
+                    break; //reemplazar con más código después
                 }
             }else{
                 System.out.println("No existe este usuario.");

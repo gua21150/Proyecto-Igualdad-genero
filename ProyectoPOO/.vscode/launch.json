@@ -14,6 +14,7 @@
             "type": "java",
             "name": "Launch App",
             "request": "launch",
+            "vmArgs": "--module-path C:/Users/PMarr/javafx-sdk-17.0.0.1/lib --add-modules javafx.controls,javafx.fxml",
             "mainClass": "ProyectoPOO.src.App",
             "projectName": "ProyectoPOO_33a73d22"
         },
@@ -21,6 +22,7 @@
             "type": "java",
             "name": "Launch App(1)",
             "request": "launch",
+            "vmArgs": "--module-path C:/Users/PMarr/javafx-sdk-17.0.0.1/lib --add-modules javafx.controls,javafx.fxml",
             "mainClass": "App"
         }
     ]
