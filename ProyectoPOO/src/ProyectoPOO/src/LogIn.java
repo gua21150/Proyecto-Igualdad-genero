@@ -1,4 +1,5 @@
 package ProyectoPOO.src;
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -20,8 +21,17 @@ public class LogIn {
     private TextField usuario;
 
     @FXML
+    void onCancelarClick(ActionEvent event) {
+        contraseña.clear();
+        usuario.clear();
+        Platform.exit();
+    }
+
+    @FXML
     void onIngresarClick(ActionEvent event) {
-        System.out.println("prueba");
+        Controlador.iniciarSesion(usuario.getText(), contraseña.getText());
+        contraseña.clear();
+        usuario.clear();
     }
 
 }
