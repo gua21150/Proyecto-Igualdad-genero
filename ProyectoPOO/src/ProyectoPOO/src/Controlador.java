@@ -1,6 +1,7 @@
 package ProyectoPOO.src;
 
 import java.io.IOException;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Scanner;
 /**
@@ -8,7 +9,8 @@ import java.util.Scanner;
  * Todos sus métodos son de tipo static porque no se instancian objetos de esta clase.
  * @author Mariel Alejandra Guamuche Recinos 2115
  * @author coauthor: Pedro Javier Marroquín Abrego 21801
- * @version 1.1 01/10/2021
+ * @since 1.1 01/10/2021
+ * @version 22102021
  */
 public class Controlador{
     private static ArrayList<Usuario> usuariosRegistrados = new ArrayList<>(); // donde se guardan los usuarios registrados
@@ -30,11 +32,20 @@ public class Controlador{
      * @param leidos: ArrayList donde se desea que se copien los datos leídos del archivo
      * @param nArchivo: nombre del archivo de texto 
      * @throws IOException: Si el archivo no ha sido encontrado o ha habido un error al leer el archivo 
+     * @throws SQLException: Al realizar la lectura de datos en sql 
      */
-    private static void leerDatos(ArrayList<String> leidos, String nArchivo) throws IOException{      
-        for (String string : archivo.Lectura(nArchivo)) {
-            leidos.add(string); // recorre la lista devuelta de la lectura del archivo para agregarla al arreglo de referencia
-        }  
+    private static void leerDatos(ArrayList<String> leidos, String dato) throws IOException, SQLException{              
+        if(dato.equals("usuario")){
+            for (String string : archivo.leerUsuario()) {
+                leidos.add(string); // recorre la lista devuelta de la lectura del archivo para agregarla al arreglo de referencia
+            }
+        } else {
+            if (dato.equals("credenciales")) {
+                for (String string : archivo.leerCredencial()) {
+                    leidos.add(string); // recorre la lista devuelta de la lectura del archivo para agregarla al arreglo de referencia
+                }
+            }
+        }          
     }
 
     /**
@@ -46,7 +57,7 @@ public class Controlador{
         ArrayList<String> temporal = new ArrayList<>(); // arraylist temporal que se pasa por referencia
         int i=0; // contador para determinar la posición actual del usuario
         try {
-            leerDatos(temporal, "Credenciales.txt");
+            leerDatos(temporal, "credenciales");
             for (String string : temporal) {
                 user = string.split(",",4)[0].strip();      // split realiza un arreglo que sera separado donde encuentre comas, por ejemplo.
                 password = string.split(",", 4)[1].strip(); // se asigna la posicion del vector a una variable temporal
@@ -56,7 +67,7 @@ public class Controlador{
             }
 
             temporal.clear(); // se limpia el arreglo antes de volver a utilizarlo
-            leerDatos(temporal, "Usuario.txt"); // ahora el arraylist temporal tendrá los datos del archivo usuarios.txt
+            leerDatos(temporal, "usuario"); // ahora el arraylist temporal tendrá los datos del archivo usuarios.txt
             
             for (String string : temporal) {                
                nombre = string.split(",",3)[0].strip();    
@@ -97,8 +108,10 @@ public class Controlador{
      * Se le solicita su nombre, correo, telefono, username, password, pregunta de seguridad y
      * respuesta pregunta de seguridad.
      * Si el correo ingresado está repetido, se le indica.
+     * @throws IOException
+     * @throws SQLException
      */
-    public static void registrarUsuarios(Scanner scanner) {
+    public static void registrarUsuarios(Scanner scanner) throws SQLException, IOException {
         cargarDatos(); // se cargan los datos a las listas creadas
         System.out.println("Tus datos no serán dado a terceros, al menos que solicites ayuda");
         String respuesta = ControladorDatos.solicitarString("¿Cuál es su correo de inicialización?", scanner);
@@ -113,9 +126,14 @@ public class Controlador{
             credenciales.add(new Credenciales(user, password, question, answer)); // creación de credencial
             usuariosRegistrados.add(new Usuario(nombre, telef, correo, credenciales.get(credenciales.size()-1))); // creación de usuario
             // hacer actualizacion de escritura de datos
-            archivo.Escritura(usuariosRegistrados);
-            archivo.EscrituraCredenciales(credenciales);
-            System.out.println("Usuario correctamente creado");
+            //archivo.Escritura(usuariosRegistrados);
+            //archivo.EscrituraCredenciales(credenciales);                        
+            if(archivo.registerUser(nombre, telef, correo)) {
+                archivo.registerCredencial(correo, user, password, question, question, answer); // realizacion del query en basedatos
+                System.out.println("Usuario correctamente creado");
+            } else {
+                System.out.println("Ha habido un error con la creacion del usuario");
+            }
         } else {
             System.out.println("Lo sentimos ese correo ya está asociado a una cuenta.\nIntenta con otro correo o iniciar sesión");
         }       
@@ -124,8 +142,10 @@ public class Controlador{
     /**
      * Realiza el proceso de inicio de sesión del usuario.
      * Se pide su username y su contraseña para ser buscado entre los datos ingresados al sistema.
+     * @throws SQLException error en el query de cambio
+     * @throws IOException error en la conexion con la base de datos
      */
-    public static void iniciarSesion(Scanner scanner) {
+    public static void iniciarSesion(Scanner scanner) throws IOException, SQLException {
         String inicio = ControladorDatos.solicitarString("Ingresa tu nombre de usuario", scanner);
         password = ControladorDatos.solicitarString("Ingresa tu contraseña", scanner);
         cargarDatos(); // en caso que se haya hecho una actualización en el archivo, se actualizan los datos actuales.
@@ -154,8 +174,10 @@ public class Controlador{
      * Pide el usuario y luego revisa la pregunta y respuesta de seguridad
      * @param usuario Usuario al que se cambiará la contraseña
      * @param scanner Scanner que se usará para pedir ingresos de datos
+     * @throws SQLException error en el query de cambio
+     * @throws IOException error en la conexion con la base de datos
      */
-    private static void recuperarContrasena(String usuario, Scanner scanner)
+    private static void recuperarContrasena(String usuario, Scanner scanner) throws IOException, SQLException
     {
         for (Credenciales credenciales2: credenciales)
         {
@@ -167,6 +189,7 @@ public class Controlador{
                 {
                     String nueva_contrasena = ControladorDatos.solicitarString("Ingrese su nueva contraseña", scanner);
                     credenciales2.setPassword(nueva_contrasena);
+                    archivo.cambiarContra(nueva_contrasena, usuario);
                     System.out.println("Se ha guardado su nueva contraseña exitosamente.");
                 }else{
                     System.out.println("¡Respuesta incorrecta!");

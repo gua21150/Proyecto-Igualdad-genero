@@ -23,8 +23,7 @@ public class App {
 
                 switch(opcion) {
                     case 1:
-                        System.out.println("Aquí hay información de nuestra página de inicio como nuestros valores, misión y visión");
-
+                        System.out.println("Aquí hay información de nuestra página de inicio como nuestros valores, misión y visión");                        
                     break;
                     case 2: 
                         System.out.println("Actividades para conocer sobre igualdad de género");
