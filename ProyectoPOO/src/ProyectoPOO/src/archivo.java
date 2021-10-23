@@ -94,7 +94,6 @@ public static void Escritura(ArrayList<Usuario>usuarioR){
         {
           try{
             escribir=new PrintWriter(archivo);
-            escribir.println("Los datos del usuario son: \n");
             //se recorre la lista para agregar los elementos del arreglo al archivo y escribirlos en este.
             for(int i=0;i<usuarioR.size();i++)
             {
@@ -112,7 +111,6 @@ public static void Escritura(ArrayList<Usuario>usuarioR){
         // en caso de que se haya creado el archivo se escriben los datos que contendra el archivo con PrintWriter
         try{
             escribir=new PrintWriter(archivo);
-            escribir.println("Los del usuario son: \n");
            for(int i=0;i<usuarioR.size();i++)
             {
               escribir.println(usuarioR.get(i).getnombre() +","+ usuarioR.get(i).gettelefono() + ","+ usuarioR.get(i).getcorreo());
@@ -148,7 +146,6 @@ public static void Escritura(ArrayList<Usuario>usuarioR){
             {
               try{
                 escribir=new PrintWriter(archivo);
-                escribir.println("Las credenciales del usuario son: \n");
                 //se recorre la lista para agregar los elementos del arreglo al archivo y escribirlos en este.
                 for(int i=0;i<credenciales.size();i++)
                 {
@@ -166,7 +163,6 @@ public static void Escritura(ArrayList<Usuario>usuarioR){
             // en caso de que se haya creado el archivo se escriben los datos que contendra el archivo con PrintWriter
             try{
                 escribir=new PrintWriter(archivo);
-                escribir.println("Las credenciales de seguridad del usuario son: \n");
                for(int i=0;i<credenciales.size();i++)
                 {
                     escribir.println(credenciales.get(i).getUsername() +","+ credenciales.get(i).getPassword() + ","+ credenciales.get(i).getQuestion()+ ","+ credenciales.get(i).getAnswer());

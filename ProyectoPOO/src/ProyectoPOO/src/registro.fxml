@@ -46,13 +46,13 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: antiquewhite;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: antiquewhite;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="RegistroUsuario">
    <top>
       <AnchorPane prefHeight="60.0" prefWidth="200.0" style="-fx-background-color: purple;" BorderPane.alignment="CENTER">
          <children>
             <ImageView fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@cheque.png" />
+                  <Image url="@../../../../../../../Downloads/cheque.png" />
                </image>
             </ImageView>
             <Text layoutX="175.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Registro de Usuario">
