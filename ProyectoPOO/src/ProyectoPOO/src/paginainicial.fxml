@@ -15,12 +15,12 @@
          <children>
             <ImageView fitHeight="85.0" fitWidth="95.0" layoutX="508.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../../../../../Downloads/Blanco%20con%20Ícono%20de%20Flor%20Logo%20(1).png" />
+                  <Image url="@Blanco%20con%20Ícono%20de%20Flor%20Logo%20(1).png" />
                </image>
             </ImageView>
-            <Button fx:id="onPressInicio" graphicTextGap="10.0" layoutX="25.0" layoutY="30.0" mnemonicParsing="false" text="Inicio" />
-            <Button fx:id="onPressActividades" layoutX="111.0" layoutY="30.0" mnemonicParsing="false" text="Actividades" />
-            <Button fx:id="onPressLecturas" layoutX="223.0" layoutY="30.0" mnemonicParsing="false" text="Lecturas" />
+            <Button fx:id="iniciarSesion" graphicTextGap="10.0" layoutX="25.0" layoutY="30.0" mnemonicParsing="false" onAction="#onPressIniciarSesion" text="Iniciar Sesión" />
+            <Button fx:id="Actividades" layoutX="142.0" layoutY="30.0" mnemonicParsing="false" onAction="#onPressActividades" text="Actividades" />
+            <Button fx:id="Lecturas" layoutX="251.0" layoutY="30.0" mnemonicParsing="false" onAction="#onPressLecturas" text="Lecturas" />
          </children>
       </AnchorPane>
    </top>
@@ -37,17 +37,17 @@
             <TextArea layoutX="224.0" layoutY="57.0" prefHeight="151.0" prefWidth="194.0" text="Misión:&#10;Disminuir la discriminación " />
             <ImageView fitHeight="90.0" fitWidth="161.0" layoutX="46.0" layoutY="215.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../../../../../Downloads/e4f8b82c5da5a63ce3c8c2c41645ba46262d4027.jpeg" />
+                  <Image url="@vision.jpeg" />
                </image>
             </ImageView>
             <ImageView fitHeight="101.0" fitWidth="200.0" layoutX="276.0" layoutY="210.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../../../../../Downloads/descarga.jpg" />
+                  <Image url="@descarga.jpg" />
                </image>
             </ImageView>
             <ImageView fitHeight="96.0" fitWidth="154.0" layoutX="422.0" layoutY="217.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../../../../../Downloads/valores2.jpg" />
+                  <Image url="@valores2.jpg" />
                </image>
             </ImageView>
          </children>
