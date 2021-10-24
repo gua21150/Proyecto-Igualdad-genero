@@ -1,6 +1,7 @@
 package ProyectoPOO.src;
 
 import java.io.IOException;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Scanner;
 /**
@@ -125,7 +126,7 @@ public class Controlador{
      * Realiza el proceso de inicio de sesión del usuario.
      * Se pide su username y su contraseña para ser buscado entre los datos ingresados al sistema.
      */
-    public static void iniciarSesion(String usuario, String password) {
+    public static void iniciarSesion(String usuario, String password) throws IOException, SQLException {
         boolean match = false;
         cargarDatos(); // en caso que se haya hecho una actualización en el archivo, se actualizan los datos actuales.
         for (Credenciales credenciales2 : credenciales) {
