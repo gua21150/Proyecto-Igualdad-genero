@@ -1,4 +1,7 @@
 package ProyectoPOO.src;
+import java.io.IOException;
+import java.sql.SQLException;
+
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -28,7 +31,7 @@ public class LogIn {
     }
 
     @FXML
-    void onIngresarClick(ActionEvent event) {
+    void onIngresarClick(ActionEvent event) throws IOException, SQLException {
         Controlador.iniciarSesion(usuario.getText(), contraseña.getText());
         contraseña.clear();
         usuario.clear();

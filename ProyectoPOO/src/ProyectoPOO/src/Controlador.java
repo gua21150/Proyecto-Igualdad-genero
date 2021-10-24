@@ -145,9 +145,8 @@ public class Controlador{
      * @throws SQLException error en el query de cambio
      * @throws IOException error en la conexion con la base de datos
      */
-    public static void iniciarSesion(Scanner scanner) throws IOException, SQLException {
-        String inicio = ControladorDatos.solicitarString("Ingresa tu nombre de usuario", scanner);
-        password = ControladorDatos.solicitarString("Ingresa tu contraseña", scanner);
+    public static void iniciarSesion(String usuario, String password) throws IOException, SQLException {
+        boolean match = false;
         cargarDatos(); // en caso que se haya hecho una actualización en el archivo, se actualizan los datos actuales.
         for (Credenciales credenciales2 : credenciales) {
             if(credenciales2.getUsername().equals(usuario)) {

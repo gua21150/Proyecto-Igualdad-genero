@@ -18,23 +18,38 @@
                   <Image url="@Blanco%20con%20Ícono%20de%20Flor%20Logo%20(1).png" />
                </image>
             </ImageView>
-            <Button fx:id="onPressInicio" graphicTextGap="10.0" layoutX="25.0" layoutY="30.0" mnemonicParsing="false" text="Inicio" />
-            <Button fx:id="onPressActividades" layoutX="111.0" layoutY="30.0" mnemonicParsing="false" text="Actividades" />
-            <Button fx:id="onPressLecturas" layoutX="223.0" layoutY="30.0" mnemonicParsing="false" text="Lecturas" />
+            <Button fx:id="iniciarSesion" graphicTextGap="10.0" layoutX="25.0" layoutY="30.0" mnemonicParsing="false" onAction="#onPressIniciarSesion" text="Iniciar Sesión" />
+            <Button fx:id="Actividades" layoutX="142.0" layoutY="30.0" mnemonicParsing="false" onAction="#onPressActividades" text="Actividades" />
+            <Button fx:id="Lecturas" layoutX="251.0" layoutY="30.0" mnemonicParsing="false" onAction="#onPressLecturas" text="Lecturas" />
          </children>
       </AnchorPane>
    </top>
    <center>
-      <AnchorPane prefHeight="454.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+      <AnchorPane prefHeight="306.0" prefWidth="585.0" style="-fx-background-color: beige;" BorderPane.alignment="CENTER">
          <children>
             <Text layoutX="238.0" layoutY="28.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Igualdad Ya" wrappingWidth="97.33673095703125">
                <font>
                   <Font name="Segoe UI Semibold Italic" size="13.0" />
                </font>
             </Text>
-            <TextArea layoutX="25.0" layoutY="40.0" prefHeight="93.0" prefWidth="262.0" text="Misión:&#10;" />
-            <TextArea layoutX="27.0" layoutY="133.0" prefHeight="84.0" prefWidth="259.0" text="Visión:" />
-            <TextArea layoutX="29.0" layoutY="217.0" prefHeight="94.0" prefWidth="257.0" text="Valores:&#10;-Amor&#10;-Respeto &#10;-Igualdad" />
+            <TextArea layoutX="424.0" layoutY="53.0" prefHeight="146.0" prefWidth="150.0" text="Valores:&#10;-Amor&#10;-Respeto &#10;-Igualdad" />
+            <TextArea layoutX="14.0" layoutY="60.0" prefHeight="148.0" prefWidth="200.0" text="Visión:  &#10;Ser una fuente de informa&#10;ción que le habrá los ojos a los &#10;usuarios sobre la importancia de &#10;las mujeres en la sociedad guate&#10;malteca para que sean vistas &#10;como iguales de los hombres " />
+            <TextArea layoutX="224.0" layoutY="57.0" prefHeight="151.0" prefWidth="194.0" text="Misión:&#10;Disminuir la discriminación " />
+            <ImageView fitHeight="90.0" fitWidth="161.0" layoutX="46.0" layoutY="215.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@vision.jpeg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="101.0" fitWidth="200.0" layoutX="276.0" layoutY="210.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@descarga.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="96.0" fitWidth="154.0" layoutX="422.0" layoutY="217.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@valores2.jpg" />
+               </image>
+            </ImageView>
          </children>
       </AnchorPane>
    </center>
