@@ -11,7 +11,7 @@ import javafx.stage.Stage;
 public class App extends Application {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        
+        launch(args);
         
         try {
             
@@ -42,7 +42,7 @@ public class App extends Application {
                         System.out.println("Se ha iniciado sesión");
                     break;
                     case 5:
-                        launch(args);
+                        
                     break;
                     default:
                         System.out.println("Gracias por usar esta página, esperemos cada día una sociedad más igualitaria");
@@ -60,12 +60,12 @@ public class App extends Application {
         
         try
         {
-            Parent root = FXMLLoader.load(getClass().getResource("login.fxml"));
+            Parent root = FXMLLoader.load(getClass().getResource("paginainicial.fxml"));
             stage.setScene(new Scene(root));
             stage.show();
         }catch(Exception e)
         {
-            System.out.println("algo fallo: "+e.getMessage());//throw e;
+            System.out.println("algo fallo: "+e.getMessage());
         }
     }
 }
