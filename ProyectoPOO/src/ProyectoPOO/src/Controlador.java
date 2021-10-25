@@ -129,7 +129,7 @@ public class Controlador{
             //archivo.Escritura(usuariosRegistrados);
             //archivo.EscrituraCredenciales(credenciales);                        
             if(archivo.registerUser(nombre, telef, correo)) {
-                archivo.registerCredencial(correo, user, password, question, question, answer); // realizacion del query en basedatos
+                archivo.registerCredencial(correo, user, password, question, answer); // realizacion del query en basedatos
                 System.out.println("Usuario correctamente creado");
             } else {
                 System.out.println("Ha habido un error con la creacion del usuario");

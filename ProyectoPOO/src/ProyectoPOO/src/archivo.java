@@ -221,7 +221,7 @@ public static void Escritura(ArrayList<Usuario>usuarioR){
      * @throws SQLException
      * @throws IOException
      */
-    public static void registerCredencial(String mail, String user, String pass, String sques, String ques, String ans) throws SQLException, IOException {
+    public static void registerCredencial(String mail, String user, String pass, String ques, String ans) throws SQLException, IOException {
         BasedeDatos connect = new BasedeDatos(); // realización de variable que hace la conexión 
         Connection connectionDb = connect.RealizarConexion();
         
