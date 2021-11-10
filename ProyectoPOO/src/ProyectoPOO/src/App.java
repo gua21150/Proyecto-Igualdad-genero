@@ -56,8 +56,7 @@ public class App extends Application {
         scanner.close();       
     }
 
-    public void start(Stage stage) throws Exception{
-        
+    public void start(Stage stage) throws Exception{        
         try
         {
             Parent root = FXMLLoader.load(getClass().getResource("paginainicial.fxml"));
