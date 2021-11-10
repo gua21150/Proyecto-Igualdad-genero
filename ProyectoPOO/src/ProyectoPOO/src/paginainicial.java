@@ -23,7 +23,17 @@ public class paginainicial {
 
     @FXML
     void onPressActividades(ActionEvent event) {
-
+        try
+        {
+            Parent root = FXMLLoader.load(getClass().getResource("discusion.fxml"));
+            Stage stage0 = (Stage) iniciarSesion.getScene().getWindow();
+            Stage stage1 = new Stage();
+            stage0.close();
+            stage1.setScene(new Scene(root));
+            stage1.show();
+        }catch(Exception e){
+            System.out.println("algo fallo: "+e.getMessage());
+        }
     }
 
     @FXML
