@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ProyectoPOO.src.Discusion">
+   <children>
+      <SplitPane dividerPositions="0.19651347068145802" orientation="VERTICAL" prefHeight="506.0" prefWidth="707.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="102.0" prefWidth="664.0" style="-fx-background-color: darkmagenta;">
+               <children>
+                  <ImageView fitHeight="85.0" fitWidth="95.0" layoutX="594.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../../../GitHub/Proyecto-Igualdad-genero/ProyectoPOO/src/ProyectoPOO/src/Blanco%20con%20Ícono%20de%20Flor%20Logo%20(1).png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="iniciarSesion" graphicTextGap="10.0" layoutX="57.0" layoutY="36.0" mnemonicParsing="false" onAction="#onPressIniciarSesion" text="Iniciar Sesión" />
+                  <Button fx:id="Actividades" layoutX="233.0" layoutY="36.0" mnemonicParsing="false" onAction="#onPressActividades" text="Actividades" />
+                  <Button fx:id="Lecturas" layoutX="415.0" layoutY="36.0" mnemonicParsing="false" onAction="#onPressLecturas" text="Lecturas" />
+               </children>
+            </AnchorPane>
+            <SplitPane prefHeight="160.0" prefWidth="200.0">
+               <items>
+                  <AnchorPane prefHeight="375.0" prefWidth="715.0">
+                     <children>
+                        <SplitPane dividerPositions="0.6537433155080212" layoutX="-4.0" layoutY="-7.0" prefHeight="414.0" prefWidth="706.0">
+                          <items>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="302.0" prefWidth="241.0">
+                                 <children>
+                                    <TableView id="tablaForos" fx:id="tableId" layoutX="3.0" layoutY="2.0" onMouseClicked="#seleccionar" prefHeight="413.0" prefWidth="458.0">
+                                      <columns>
+                                        <TableColumn id="fechaCl" fx:id="fechaTabla" prefWidth="106.39995551109314" text="Fecha" />
+                                        <TableColumn id="usuarioCl" fx:id="usuarioTabla" prefWidth="119.20008087158203" text="Usuario" />
+                                          <TableColumn id="comentCl" fx:id="comentarioTabla" prefWidth="230.40005493164062" text="Comentario" />
+                                      </columns>
+                                    </TableView>
+                                 </children>
+                              </AnchorPane>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="314.0" prefWidth="150.0" style="-fx-background-color: beige;">
+                                 <children>
+                                    <Label layoutX="7.0" layoutY="14.0" prefHeight="26.0" prefWidth="168.0" text="Cuéntanos tu historia">
+                                       <font>
+                                          <Font name="Corbel Bold" size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="7.0" layoutY="40.0" prefHeight="26.0" prefWidth="168.0" text="Usuario">
+                                       <font>
+                                          <Font name="Corbel Bold" size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="7.0" layoutY="84.0" prefHeight="26.0" prefWidth="168.0" text="¿Qué sucedió?">
+                                       <font>
+                                          <Font name="Corbel Bold" size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="6.0" layoutY="281.0" prefHeight="26.0" prefWidth="168.0" text="Usuario">
+                                       <font>
+                                          <Font name="Corbel Bold" size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="6.0" layoutY="326.0" prefHeight="26.0" prefWidth="168.0" text="Ha dicho:">
+                                       <font>
+                                          <Font name="Corbel Bold" size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="7.0" layoutY="258.0" prefHeight="26.0" prefWidth="188.0" text="Comentario seleccionado:">
+                                       <font>
+                                          <Font name="Corbel Bold" size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField id="userText" fx:id="usuarioTxt" disable="true" editable="false" layoutX="7.0" layoutY="61.0" prefHeight="25.0" prefWidth="225.0">
+                                       <font>
+                                          <Font name="Corbel" size="13.0" />
+                                       </font>
+                                    </TextField>
+                                    <TextArea id="comentarioText" fx:id="comentarioTxt" layoutX="9.0" layoutY="110.0" prefHeight="69.0" prefWidth="226.0" promptText="Escribe tu comentario al respecto">
+                                       <font>
+                                          <Font name="Corbel" size="13.0" />
+                                       </font>
+                                    </TextArea>
+                                    <TextArea id="comentarioSelecText" fx:id="comentarioSelecTxt" disable="true" editable="false" layoutX="7.0" layoutY="348.0" prefHeight="50.0" prefWidth="225.0" promptText="Comentario no disponible" />
+                                    <TextField id="userSelecText" fx:id="uSelecTxt" disable="true" editable="false" layoutX="6.0" layoutY="303.0" prefHeight="25.0" prefWidth="225.0" promptText="No has seleccionado ni un comentario">
+                                       <font>
+                                          <Font name="Corbel" size="13.0" />
+                                       </font>
+                                    </TextField>
+                                    <Button id="publicarComentario" fx:id="agregarBtn" layoutX="11.0" layoutY="186.0" mnemonicParsing="false" onAction="#agregar" prefHeight="26.0" prefWidth="218.0" text="Añadir comentario" />
+                                    <Button id="publicarComentario" fx:id="nuevoBtn" layoutX="11.0" layoutY="222.0" mnemonicParsing="false" onAction="#nuevoComentario" prefHeight="26.0" prefWidth="218.0" text="Nuevo comentario" />
+                                 </children>
+                              </AnchorPane>
+                          </items>
+                        </SplitPane>
+                     </children>
+                  </AnchorPane>
+               </items>
+            </SplitPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

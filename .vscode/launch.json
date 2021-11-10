@@ -6,17 +6,16 @@
     "configurations": [
         {
             "type": "java",
-            "name": "Launch Current File",
+            "name": "Launch Java Program",
             "request": "launch",
-            "mainClass": "${file}"
+            "mainClass": "ProyectoPOO.src.App",
+            "vmArgs": "--module-path C:/javafx-sdk-17.0.1/lib --add-modules javafx.controls,javafx.fxml",
         },
         {
             "type": "java",
-            "name": "Launch App",
+            "name": "Launch Current File",
             "request": "launch",
-            "vmArgs": "--module-path C:/Users/PMarr/javafx-sdk-17.0.0.1/lib --add-modules javafx.controls,javafx.fxml",
-            "mainClass": "ProyectoPOO.src.App",
-            "projectName": "Proyecto-Igualdad-genero_f755cec6"
+            "mainClass": "${file}"
         }
     ]
 }
