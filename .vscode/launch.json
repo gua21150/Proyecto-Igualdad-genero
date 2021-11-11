@@ -6,6 +6,14 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch App",
+            "request": "launch",
+            "mainClass": "ProyectoPOO.src.App",
+            "vmArgs": "--module-path C:/javafx-sdk-17.0.1/lib --add-modules javafx.controls,javafx.fxml",
+            "projectName": "Proyecto-parte-1_e779deb4"
+        },
+        {
+            "type": "java",
             "name": "Launch Current File",
             "request": "launch",
             "mainClass": "${file}"
@@ -14,7 +22,7 @@
             "type": "java",
             "name": "Launch App",
             "request": "launch",
-            "vmArgs": "--module-path C:/Users/PMarr/javafx-sdk-17.0.0.1/lib --add-modules javafx.controls,javafx.fxml",
+            "vmArgs": "--module-path C:/javafx-sdk-17.0.1/lib --add-modules javafx.controls,javafx.fxml",
             "mainClass": "ProyectoPOO.src.App",
             "projectName": "Proyecto-Igualdad-genero_f755cec6"
         }
