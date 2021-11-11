@@ -14,9 +14,9 @@
    <children>
       <BorderPane layoutX="206.0" layoutY="120.0" prefHeight="200.0" prefWidth="200.0">
          <center>
-            <ImageView fitHeight="135.0" fitWidth="153.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+            <ImageView fitHeight="132.0" fitWidth="140.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
                <image>
-                  <Image url="@../../../../../../../Downloads/e_web_05_0.png" />
+                  <Image url="@e_web_05_0.png" />
                </image>
             </ImageView>
          </center>
@@ -30,7 +30,6 @@
             </ImageView>
             <Button fx:id="actividades" graphicTextGap="10.0" layoutX="128.0" layoutY="39.0" mnemonicParsing="false" onAction="#Onactividades" text="Actividades" />
             <Button fx:id="lecturas" layoutX="217.0" layoutY="39.0" mnemonicParsing="false" onAction="#Onlecturas" text="Lecturas" />
-            <Button fx:id="instituciones" layoutX="289.0" layoutY="39.0" mnemonicParsing="false" onAction="#Oninstituciones" text="Instituciones" />
             <Button fx:id="principal" layoutX="36.0" layoutY="39.0" mnemonicParsing="false" onAction="#Onprincipal" text="Principal" />
          </children>
       </AnchorPane>
