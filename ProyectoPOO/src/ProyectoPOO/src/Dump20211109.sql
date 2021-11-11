@@ -18,6 +18,31 @@ USE `datos`;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
+-- Table structure for table `comentariosforo`
+--
+
+DROP TABLE IF EXISTS `comentariosforo`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `comentariosforo` (
+  `userName` varchar(20) NOT NULL,
+  `comentario` longtext NOT NULL,
+  `fecha` date NOT NULL,
+  KEY `userFk_idx` (`userName`),
+  CONSTRAINT `userFk` FOREIGN KEY (`userName`) REFERENCES `credenciales` (`userName`) ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `comentariosforo`
+--
+
+LOCK TABLES `comentariosforo` WRITE;
+/*!40000 ALTER TABLE `comentariosforo` DISABLE KEYS */;
+/*!40000 ALTER TABLE `comentariosforo` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `credenciales`
 --
 
@@ -81,4 +106,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-10-24 23:22:13
+-- Dump completed on 2021-11-09 22:17:23

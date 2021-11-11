@@ -79,7 +79,7 @@ public class archivo{
      * @return crea un archivo txt con los datos en la carpeta del proyecto
      * @throws FileNotFoundException La excepción será levantada en caso de que no se ha encontrado el archivo especificado.
      */
-public static void Escritura(ArrayList<Usuario>usuarioR){
+    public static void Escritura(ArrayList<Usuario>usuarioR){
     // se crea el archivo que contendra  la informacion del programa
     File archivo;
     PrintWriter escribir;
