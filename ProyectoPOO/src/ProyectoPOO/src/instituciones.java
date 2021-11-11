@@ -25,11 +25,10 @@ public class instituciones {
     private Button principal;
 
     @FXML
-    void Onactividades(ActionEvent event) throws IOException{
-        
+    void Onactividades(ActionEvent event) throws IOException{        
         try
         {
-            Parent root = FXMLLoader.load(getClass().getResource("paginainicial.fxml"));
+            Parent root = FXMLLoader.load(getClass().getResource("discusion.fxml"));
             Stage stage0 = (Stage) actividades.getScene().getWindow();
             Stage stage1 = new Stage();
             stage0.close();
@@ -38,7 +37,6 @@ public class instituciones {
         }catch(Exception e){
             System.out.println("algo fallo: "+e.getMessage());
         }
-
     }
 
     @FXML
@@ -54,13 +52,10 @@ public class instituciones {
         }catch(Exception e){
             System.out.println("algo fallo: "+e.getMessage());
         }
-
-
     }
 
     @FXML
     void Onprincipal(ActionEvent event) {
-
         try
         {
             Parent root = FXMLLoader.load(getClass().getResource("paginainicial.fxml"));
@@ -76,21 +71,16 @@ public class instituciones {
     
     @FXML
     void onlink1(ActionEvent event) throws URISyntaxException, IOException {
-    Desktop.getDesktop().browse(new URI("http://ggm.org.gt/caimus/"));
-
+        Desktop.getDesktop().browse(new URI("http://ggm.org.gt/caimus/"));
     }
 
     @FXML
     void onlink2(ActionEvent event) throws URISyntaxException, IOException {
-    Desktop.getDesktop().browse(new URI("https://miriam-guatemala.org/"));
-
+        Desktop.getDesktop().browse(new URI("https://miriam-guatemala.org/"));
     }
 
     @FXML
     void onlink3(ActionEvent event) throws URISyntaxException, IOException{
         Desktop.getDesktop().browse(new URI("https://institutodelavictima.gob.gt/quienes-somos/"));
-
     }
-
-    
 }
