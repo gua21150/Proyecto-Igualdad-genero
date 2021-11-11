@@ -20,6 +20,9 @@ public class paginainicial {
 
     @FXML
     private Button iniciarSesion;
+    
+    @FXML
+    private Button instituciones;
 
     @FXML
     void onPressActividades(ActionEvent event) {
@@ -43,6 +46,12 @@ public class paginainicial {
 
     @FXML
     void onPressLecturas(ActionEvent event) {
+
+    }
+
+    @FXML
+    void oninstituciones(ActionEvent event) {
+       
 
     }
 

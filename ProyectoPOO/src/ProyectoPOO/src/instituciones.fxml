@@ -10,8 +10,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="498.0" prefWidth="612.0" style="-fx-background-color: cornsilk;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="instituciones">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="498.0" prefWidth="612.0" style="-fx-background-color: cornsilk;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ProyectoPOO.src.instituciones">
    <children>
       <BorderPane layoutX="206.0" layoutY="120.0" prefHeight="200.0" prefWidth="200.0">
          <center>
@@ -46,5 +45,6 @@
       <Hyperlink layoutX="65.0" layoutY="319.0" onAction="#onlink1" text="CAIMUS" />
       <Hyperlink layoutX="435.0" layoutY="320.0" onAction="#onlink2" text="AsociacionMiriam" />
       <Hyperlink layoutX="-182.0" layoutY="76.0" text="Hyperlink" />
+      <Hyperlink layoutX="256.0" layoutY="461.0" onAction="#onlink3" text="Instituto de la Víctima" />
    </children>
 </AnchorPane>
