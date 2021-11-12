@@ -74,8 +74,10 @@
             </Label>
             <TextField fx:id="usuario" layoutX="122.0" layoutY="169.0" prefHeight="26.0" prefWidth="158.0" promptText="Nombre de usuario" />
             <PasswordField fx:id="contraseña" layoutX="123.0" layoutY="240.0" prefHeight="26.0" prefWidth="160.0" promptText="Contraseña" />
-            <Button fx:id="ingresar" layoutX="120.0" layoutY="297.0" mnemonicParsing="false" onAction="#onIngresarClick" prefHeight="26.0" prefWidth="165.0" text="Ingresar" />
-            <Button fx:id="cancelar" layoutX="124.0" layoutY="341.0" mnemonicParsing="false" onAction="#onCancelarClick" prefHeight="26.0" prefWidth="163.0" text="Cancelar" />
+            <Button fx:id="ingresar" layoutX="120.0" layoutY="315.0" mnemonicParsing="false" onAction="#onIngresarClick" prefHeight="26.0" prefWidth="165.0" text="Ingresar" />
+            <Button fx:id="cancelar" layoutX="121.0" layoutY="351.0" mnemonicParsing="false" onAction="#onCancelarClick" prefHeight="26.0" prefWidth="163.0" text="Cancelar" />
+            <Label fx:id="Registrarse" layoutX="124.0" layoutY="200.0" onMouseClicked="#onRegistroclick" text="No tienes Usuario? Registrarse" underline="true" />
+            <Label fx:id="Recuperar" layoutX="81.0" layoutY="276.0" onMouseClicked="#onRecuperarClick" text="Olvidaste tu contraseña o usuario? Recuperar" underline="true" />
          </children>
       </AnchorPane>
    </center>
