@@ -24,7 +24,7 @@ public class paginainicial {
 
     @FXML
     private Button iniciarSesion;
-    
+
     @FXML
     private Button instituciones;
 
@@ -64,7 +64,11 @@ public class paginainicial {
     }
 
     @FXML
+    void onPressSalir(ActionEvent event) {
+        Platform.exit();
+    }
 
+    @FXML
     void oninstituciones(ActionEvent event) {
         try
         {
@@ -77,10 +81,5 @@ public class paginainicial {
         }catch(Exception e){
             System.out.println("algo fallo: "+e.getMessage());
         }
-      
-    void onPressSalir(ActionEvent event) {
-        Platform.exit();
-        }
     }
-
 }
