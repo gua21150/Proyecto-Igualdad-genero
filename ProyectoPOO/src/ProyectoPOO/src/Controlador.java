@@ -167,26 +167,51 @@ public class Controlador{
      * @throws SQLException error en el query de cambio
      * @throws IOException error en la conexion con la base de datos
      */
-    private static void recuperarContrasena(String usuario, Scanner scanner) throws IOException, SQLException
+    public static String recuperarContrasena(String respuestacorrecta, String nuevopassword, String pregunta) throws IOException, SQLException
     {
-        for (Credenciales credenciales2: credenciales)
+        cargarDatos();
+        String passwordguardado = "no se pudo guardar la contraseña";
+        if(respuestacorrecta.equals("respuesta correcta, escriba su nueva contraseña"))
+        {
+            for (Credenciales credenciales2: credenciales)
+            {
+                if(credenciales2.getQuestion().equals(pregunta))
+                {
+                    credenciales2.setPassword(nuevopassword);
+                    archivo.cambiarContra(nuevopassword, credenciales2.getUsername());
+                    passwordguardado = "contraseña guardada exitosamente, puede oprimir cancelar para regresar";
+                }
+            }
+        }
+        return passwordguardado;
+    }
+    public static String buscarUsuario(String usuario) throws IOException, SQLException {   
+        String preguntaEncontrada = "no se encontró el usuario";
+        cargarDatos();
+        for(Credenciales credenciales2: credenciales)
         {
             if(credenciales2.getUsername().equals(usuario))
             {
-                System.out.println(credenciales2.getQuestion());
-                String respuesta = ControladorDatos.solicitarString("Ingrese la respuesta a su pregunta de seguridad", scanner);
-                if(credenciales2.getAnswer().equals(respuesta))
-                {
-                    String nueva_contrasena = ControladorDatos.solicitarString("Ingrese su nueva contraseña", scanner);
-                    credenciales2.setPassword(nueva_contrasena);
-                    archivo.cambiarContra(nueva_contrasena, usuario);
-                    System.out.println("Se ha guardado su nueva contraseña exitosamente.");
-                }else{
-                    System.out.println("¡Respuesta incorrecta!");
-                }
-            }else{
-                System.out.println("No existe este usuario.");
+                preguntaEncontrada = credenciales2.getQuestion();
+                break;
             }
         }
+        return preguntaEncontrada;
+    }
+    public static String verificarRespuesta(String pregunta, String respuesta) throws IOException, SQLException
+    {
+        String correcto = "respuesta incorrecta";
+        cargarDatos();
+        for(Credenciales credenciales2: credenciales)
+        {
+            if(credenciales2.getQuestion().equals(pregunta))
+            {
+                if(credenciales2.getAnswer().equals(respuesta))
+                {
+                    correcto = "respuesta correcta, escriba su nueva contraseña";
+                }
+            }
+        }
+        return correcto;
     }
 }

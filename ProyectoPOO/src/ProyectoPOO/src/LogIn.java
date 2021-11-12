@@ -68,7 +68,7 @@ public class LogIn {
     void onRecuperarClick(MouseEvent event) {
         try
         {
-            Parent root = FXMLLoader.load(getClass().getResource(".fxml"));
+            Parent root = FXMLLoader.load(getClass().getResource("recuperacion.fxml"));
             Stage stage0 = (Stage) Recuperar.getScene().getWindow();
             Stage stage1 = new Stage();
             stage0.close();
