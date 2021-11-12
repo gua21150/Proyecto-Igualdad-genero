@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="498.0" prefWidth="612.0" style="-fx-background-color: cornsilk;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ProyectoPOO.src.instituciones">
+   <children>
+      <BorderPane layoutX="206.0" layoutY="120.0" prefHeight="200.0" prefWidth="200.0">
+         <center>
+            <ImageView fitHeight="132.0" fitWidth="140.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+               <image>
+                  <Image url="@e_web_05_0.png" />
+               </image>
+            </ImageView>
+         </center>
+      </BorderPane>
+      <AnchorPane layoutX="-6.0" layoutY="-4.0" prefHeight="103.0" prefWidth="622.0" style="-fx-background-color: purple;">
+         <children>
+            <ImageView fitHeight="92.0" fitWidth="111.0" layoutX="523.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../../Downloads/Blanco%20con%20Ícono%20de%20Flor%20Logo%20(1).png" />
+               </image>
+            </ImageView>
+            <Button fx:id="actividades" graphicTextGap="10.0" layoutX="128.0" layoutY="39.0" mnemonicParsing="false" onAction="#Onactividades" text="Foro" />
+            <Button fx:id="lecturas" layoutX="189.0" layoutY="39.0" mnemonicParsing="false" onAction="#Onlecturas" text="Lecturas" />
+            <Button fx:id="principal" layoutX="36.0" layoutY="39.0" mnemonicParsing="false" onAction="#Onprincipal" text="Principal" />
+         </children>
+      </AnchorPane>
+      <Text layoutX="206.0" layoutY="125.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Instituciones de Ayuda" wrappingWidth="158.13671875">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+      </Text>
+      <TextArea layoutX="14.0" layoutY="149.0" prefHeight="170.0" prefWidth="200.0" text="CAIMUS es un lugar seguro y &#10;confiable donde las mujeres que&#10;sufren o han sufrido violencia &#10;encuentra apoyo, información y &#10;asesoría. Estos servicios se &#10;proporcionan sin ningún costo,&#10;requisito o condiciones.&#10;Para mayor informacion presione&#10;el link abajo." />
+      <TextArea layoutX="390.0" layoutY="140.0" prefHeight="170.0" prefWidth="208.0" text="Asociación Miriam es una &#10;institución que empodera a las&#10;mujeres indígenas a través de &#10;un modelo integral de atención&#10;para su incorporación en la &#10;economía del país y su &#10;participación activa como &#10;agentes de cambio.&#10;Presione el link abajo." />
+      <TextArea layoutX="130.0" layoutY="346.0" prefHeight="110.0" prefWidth="342.0" text="El Instituto de la víctima es el ente rector de las políticas &#10;victimólogicas en Guatemala, y la institución encargada&#10;de brindar asistencia y atención a las víctimas del delito.&#10;Para más información presione el botón por debajo." />
+      <Hyperlink layoutX="65.0" layoutY="319.0" onAction="#onlink1" text="CAIMUS" />
+      <Hyperlink layoutX="435.0" layoutY="320.0" onAction="#onlink2" text="AsociacionMiriam" />
+      <Hyperlink layoutX="-182.0" layoutY="76.0" text="Hyperlink" />
+      <Hyperlink layoutX="256.0" layoutY="461.0" onAction="#onlink3" text="Instituto de la Víctima" />
+   </children>
+</AnchorPane>
