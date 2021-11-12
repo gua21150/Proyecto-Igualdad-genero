@@ -18,11 +18,10 @@
                   <Image url="@Blanco%20con%20Ícono%20de%20Flor%20Logo%20(1).png" />
                </image>
             </ImageView>
-            <Button fx:id="iniciarSesion" graphicTextGap="10.0" layoutX="14.0" layoutY="31.0" mnemonicParsing="false" onAction="#onPressIniciarSesion" prefHeight="26.0" prefWidth="87.0" text="Iniciar Sesión" />
-            <Button fx:id="Actividades" layoutX="109.0" layoutY="31.0" mnemonicParsing="false" onAction="#onPressActividades" prefWidth="80.0" text="Foros" />
-            <Button fx:id="Lecturas" layoutX="200.0" layoutY="31.0" mnemonicParsing="false" onAction="#onPressLecturas" prefWidth="80.0" text="Lecturas" />
-            <Button fx:id="Salir" layoutX="388.0" layoutY="30.0" mnemonicParsing="false" onAction="#onPressSalir" prefHeight="26.0" prefWidth="117.0" text="Salir/Cerrar Sesión" />
-            <Button fx:id="instituciones" layoutX="290.0" layoutY="30.0" mnemonicParsing="false" onAction="#oninstituciones" prefWidth="90.0" text="Instituciones" />
+            <Button fx:id="Actividades" layoutX="31.0" layoutY="31.0" mnemonicParsing="false" onAction="#onPressActividades" prefWidth="80.0" text="Foros" />
+            <Button fx:id="Lecturas" layoutX="145.0" layoutY="31.0" mnemonicParsing="false" onAction="#onPressLecturas" prefWidth="80.0" text="Lecturas" />
+            <Button fx:id="Salir" layoutX="376.0" layoutY="30.0" mnemonicParsing="false" onAction="#onPressSalir" prefHeight="26.0" prefWidth="117.0" text="Salir/Cerrar Sesión" />
+            <Button fx:id="instituciones" layoutX="255.0" layoutY="30.0" mnemonicParsing="false" onAction="#oninstituciones" prefWidth="90.0" text="Instituciones" />
          </children>
       </AnchorPane>
    </top>

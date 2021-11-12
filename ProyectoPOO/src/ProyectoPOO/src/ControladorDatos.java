@@ -17,7 +17,7 @@ public class ControladorDatos {
      * @param value String que evalua para verificar que el dato es correcto
      * @return true: si el dato cumple con la especificación, false: si el dato no cumple con la especificación
      */
-    private static boolean isString(String value) {    
+    public static boolean isString(String value) {    
         boolean correcto = false;   // variable booleana donde se guarda la actualización del dato
         if(value.isBlank() || value.isEmpty()) {
             correcto = false;       // valida que el dato no esté en blanco o contenga solo espacios en blanco 

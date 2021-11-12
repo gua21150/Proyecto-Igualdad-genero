@@ -177,9 +177,15 @@ public class Controlador{
             {
                 if(credenciales2.getQuestion().equals(pregunta))
                 {
-                    credenciales2.setPassword(nuevopassword);
-                    archivo.cambiarContra(nuevopassword, credenciales2.getUsername());
-                    passwordguardado = "contraseña guardada exitosamente, puede oprimir cancelar para regresar";
+                    if(ControladorDatos.isString(nuevopassword))
+                    {
+                        credenciales2.setPassword(nuevopassword);
+                        archivo.cambiarContra(nuevopassword, credenciales2.getUsername());
+                        passwordguardado = "contraseña guardada exitosamente, puede oprimir cancelar para regresar";
+                    }else
+                    {
+                        passwordguardado = "ingrese una contraseña";
+                    }
                 }
             }
         }

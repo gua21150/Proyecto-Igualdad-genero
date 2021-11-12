@@ -23,9 +23,6 @@ public class paginainicial {
     private Button Salir;
 
     @FXML
-    private Button iniciarSesion;
-
-    @FXML
     private Button instituciones;
 
     @FXML
@@ -34,21 +31,6 @@ public class paginainicial {
         {
             Parent root = FXMLLoader.load(getClass().getResource("discusion.fxml"));
             Stage stage0 = (Stage) Actividades.getScene().getWindow();
-            Stage stage1 = new Stage();
-            stage0.close();
-            stage1.setScene(new Scene(root));
-            stage1.show();
-        }catch(Exception e){
-            System.out.println("algo fallo: "+e.getMessage());
-        }
-    }
-
-    @FXML
-    void onPressIniciarSesion(ActionEvent event) throws IOException {
-        try
-        {
-            Parent root = FXMLLoader.load(getClass().getResource("login.fxml"));
-            Stage stage0 = (Stage) iniciarSesion.getScene().getWindow();
             Stage stage1 = new Stage();
             stage0.close();
             stage1.setScene(new Scene(root));
