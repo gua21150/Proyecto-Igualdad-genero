@@ -111,18 +111,11 @@ public class Controlador{
      * @throws IOException
      * @throws SQLException
      */
-    public static void registrarUsuarios(Scanner scanner) throws SQLException, IOException {
+    public static boolean registrarUsuarios(String correo, String nombre, String telef, String user, String password, String question, String answer) throws SQLException, IOException {
+        boolean exitoso = false;
         cargarDatos(); // se cargan los datos a las listas creadas
-        System.out.println("Tus datos no serán dado a terceros, al menos que solicites ayuda");
-        String respuesta = ControladorDatos.solicitarString("¿Cuál es su correo de inicialización?", scanner);
-        if(!validarUsuario(respuesta)){
-            correo = respuesta; // valida que el correo no esté repetido, de no estar repetido, solicitará el resto de datos
-            nombre = ControladorDatos.solicitarString("Ingresa tu nombre completo", scanner);
-            telef = ControladorDatos.solicitarString("¿Cuál es tu numero de telefono?", scanner);
-            user = ControladorDatos.solicitarString("Ingresa tu nombre de usuario", scanner);
-            password = ControladorDatos.solicitarString("Ingresa tu contraseña", scanner);
-            question = ControladorDatos.solicitarString("Ingresa qué debemos de preguntarte cuando quieras recuperar tu contraseña.\nEste es un factor de seguridad.", scanner);
-            answer = ControladorDatos.solicitarString("Ingresa la respuesta a tu pregunta", scanner);
+        if(!validarUsuario(correo)){
+            // valida que el correo no esté repetido, de no estar repetido, solicitará el resto de datos
             credenciales.add(new Credenciales(user, password, question, answer)); // creación de credencial
             usuariosRegistrados.add(new Usuario(nombre, telef, correo, credenciales.get(credenciales.size()-1))); // creación de usuario
             // hacer actualizacion de escritura de datos
@@ -131,12 +124,14 @@ public class Controlador{
             if(archivo.registerUser(nombre, telef, correo)) {
                 archivo.registerCredencial(correo, user, password, question, answer); // realizacion del query en basedatos
                 System.out.println("Usuario correctamente creado");
+                exitoso = true;
             } else {
                 System.out.println("Ha habido un error con la creacion del usuario");
             }
         } else {
             System.out.println("Lo sentimos ese correo ya está asociado a una cuenta.\nIntenta con otro correo o iniciar sesión");
-        }       
+        }
+        return exitoso;    
     }
 
     /**
@@ -145,7 +140,7 @@ public class Controlador{
      * @throws SQLException error en el query de cambio
      * @throws IOException error en la conexion con la base de datos
      */
-    public static void iniciarSesion(String usuario, String password) throws IOException, SQLException {
+    public static boolean iniciarSesion(String usuario, String password) throws IOException, SQLException {
         boolean match = false;
         cargarDatos(); // en caso que se haya hecho una actualización en el archivo, se actualizan los datos actuales.
         for (Credenciales credenciales2 : credenciales) {
@@ -162,6 +157,7 @@ public class Controlador{
         {
             System.out.println("No existe el usuario o la contraseña es inválida");
         }
+        return match;
     }
     /**
      * Ayuda al usuario a recuperar su contraseña
