@@ -4,13 +4,14 @@
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
+
         {
             "type": "java",
             "name": "Launch App",
             "request": "launch",
             "vmArgs": "--module-path C:/javafx-sdk-17.0.0.1/lib --add-modules javafx.controls,javafx.fxml",
             "mainClass": "ProyectoPOO.src.App",
-            "projectName": "Proyecto-Igualdad-genero_f755cec6"
+            "vmArgs": "--module-path C:/javafx-sdk-17.0.0.1/lib --add-modules javafx.controls,javafx.fxml",
         },
         {
             "type": "java",
@@ -19,5 +20,6 @@
             "request": "launch",
             "mainClass": "ProyectoPOO.src.App"
         }
+
     ]
 }
