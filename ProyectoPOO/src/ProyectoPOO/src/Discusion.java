@@ -127,7 +127,7 @@ public class Discusion {
     @FXML
     void onPressIniciarSesion(ActionEvent event) {
 	try {
-        Parent root = FXMLLoader.load(getClass().getResource("login.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("paginainicial.fxml"));
         Stage stage0 = (Stage) iniciarSesion1.getScene().getWindow();
         Stage stage1 = new Stage();
         stage0.close();
