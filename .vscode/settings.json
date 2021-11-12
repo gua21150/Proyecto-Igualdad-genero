@@ -1,23 +1,15 @@
 {
     "java.project.referencedLibraries": [
-        "lib/**/*.jar",        
-        "ProyectoPOO/javafx-sdk-17.0.0.1/lib/javafx.base.jar",
-        "ProyectoPOO/javafx-sdk-17.0.0.1/lib/javafx.controls.jar",
-        "ProyectoPOO/javafx-sdk-17.0.0.1/lib/javafx.fxml.jar",
-        "ProyectoPOO/javafx-sdk-17.0.0.1/lib/javafx.graphics.jar",
-        "ProyectoPOO/javafx-sdk-17.0.0.1/lib/javafx.media.jar",
-        "ProyectoPOO/javafx-sdk-17.0.0.1/lib/javafx.swing.jar",
-        "ProyectoPOO/javafx-sdk-17.0.0.1/lib/javafx.web.jar",
-        "ProyectoPOO/javafx-sdk-17.0.0.1/lib/javafx-swt.jar",
+        "lib/**/*.jar",
         "ProyectoPOO/Librerias/mysql-connector-java-8.0.27.jar",
-        "c:\\javafx-sdk-17.0.1\\lib\\javafx.base.jar",
-        "c:\\javafx-sdk-17.0.1\\lib\\javafx.controls.jar",
-        "c:\\javafx-sdk-17.0.1\\lib\\javafx.fxml.jar",
-        "c:\\javafx-sdk-17.0.1\\lib\\javafx.graphics.jar",
-        "c:\\javafx-sdk-17.0.1\\lib\\javafx.media.jar",
-        "c:\\javafx-sdk-17.0.1\\lib\\javafx.swing.jar",
-        "c:\\javafx-sdk-17.0.1\\lib\\javafx.web.jar",
-        "c:\\javafx-sdk-17.0.1\\lib\\javafx-swt.jar"
+        "c:/javafx-sdk-17.0.1/lib/javafx.base.jar",
+        "c:/javafx-sdk-17.0.1/lib/javafx.controls.jar",
+        "c:/javafx-sdk-17.0.1/lib/javafx.fxml.jar",
+        "c:/javafx-sdk-17.0.1/lib/javafx.graphics.jar",
+        "c:/javafx-sdk-17.0.1/lib/javafx.media.jar",
+        "c:/javafx-sdk-17.0.1/lib/javafx.swing.jar",
+        "c:/javafx-sdk-17.0.1/lib/javafx.web.jar",
+        "c:/javafx-sdk-17.0.1/lib/javafx-swt.jar"
     ],
     "java.project.sourcePaths": [
         "ProyectoPOO/src",

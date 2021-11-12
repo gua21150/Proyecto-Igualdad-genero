@@ -147,7 +147,7 @@ public class Controlador{
             if(credenciales2.getUsername().equals(usuario)) {
                 if (credenciales2.getPassword().equals(password)) {
                     System.out.println("Hola " + credenciales2.getUsername() + ", es bueno verte de nuevo");
-                    match = true;
+                    match = true;                 
                     break;
                 }
                 //tiene que redireccionar a recuperar contraseña si lo elige el usuario
