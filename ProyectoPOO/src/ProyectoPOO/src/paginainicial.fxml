@@ -22,6 +22,7 @@
             <Button fx:id="Actividades" layoutX="142.0" layoutY="30.0" mnemonicParsing="false" onAction="#onPressActividades" text="Actividades" />
             <Button fx:id="Lecturas" layoutX="251.0" layoutY="30.0" mnemonicParsing="false" onAction="#onPressLecturas" text="Lecturas" />
             <Button fx:id="Salir" layoutX="341.0" layoutY="30.0" mnemonicParsing="false" onAction="#onPressSalir" text="Salir/Cerrar Sesión" />
+            <Button fx:id="instituciones" layoutX="348.0" layoutY="31.0" mnemonicParsing="false" onAction="#oninstituciones" text="Instituciones" />
          </children>
       </AnchorPane>
    </top>
@@ -35,7 +36,7 @@
             </Text>
             <TextArea layoutX="424.0" layoutY="53.0" prefHeight="146.0" prefWidth="150.0" text="Valores:&#10;-Amor&#10;-Respeto &#10;-Igualdad" />
             <TextArea layoutX="14.0" layoutY="60.0" prefHeight="148.0" prefWidth="200.0" text="Visión:  &#10;Ser una fuente de informa&#10;ción que le habrá los ojos a los &#10;usuarios sobre la importancia de &#10;las mujeres en la sociedad guate&#10;malteca para que sean vistas &#10;como iguales de los hombres " />
-            <TextArea layoutX="224.0" layoutY="57.0" prefHeight="151.0" prefWidth="194.0" text="Misión:&#10;Disminuir la discriminación " />
+            <TextArea layoutX="224.0" layoutY="57.0" prefHeight="151.0" prefWidth="194.0" text="Misión:&#10;Disminuir la discriminación que &#10;sufren las mujeres para &#10;lograr que se desmpeñen en&#10;cualquiera de las áreas &#10;profesionales en fin de que &#10;tengan cualquier libertad." />
             <ImageView fitHeight="90.0" fitWidth="161.0" layoutX="46.0" layoutY="215.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@vision.jpeg" />
