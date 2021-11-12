@@ -55,7 +55,7 @@ public class paginainicial {
     void onPressLecturas(ActionEvent event) throws  IOException {
         try
         {
-            Parent root = FXMLLoader.load(getClass().getResource("lecturas.fxml"));
+            Parent root = FXMLLoader.load(getClass().getResource("lecprincipal.fxml"));
             Stage stage0 = (Stage)  Lecturas.getScene().getWindow();
             Stage stage1 = new Stage();
             stage0.close();

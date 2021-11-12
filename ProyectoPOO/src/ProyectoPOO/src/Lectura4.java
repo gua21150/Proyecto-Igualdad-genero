@@ -1,7 +1,5 @@
 package ProyectoPOO.src;
 
-import java.net.URL;
-import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -10,13 +8,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
 
-public class Lectura1 {
-
-    @FXML
-    private ResourceBundle resources;
-
-    @FXML
-    private URL location;
+public class Lectura4 {
 
     @FXML
     private Button Foro;
@@ -37,7 +29,7 @@ public class Lectura1 {
             stage0.close();
             stage1.setScene(new Scene(root));
             stage1.show();
-            }catch(Exception e){
+        }catch(Exception e){
             System.out.println("algo fallo: "+e.getCause());
         }
     }
@@ -52,21 +44,13 @@ public class Lectura1 {
             stage0.close();
             stage1.setScene(new Scene(root));
             stage1.show();
-            }catch(Exception e){
+        }catch(Exception e){
             System.out.println("algo fallo: "+e.getCause());
         }
     }
 
     @FXML
     void OnLecturas(ActionEvent event) {
-
-    }
-
-    @FXML
-    void initialize() {
-        assert Foro != null : "fx:id=\"Foro\" was not injected: check your FXML file 'lectura1.fxml'.";
-        assert Inicio != null : "fx:id=\"Inicio\" was not injected: check your FXML file 'lectura1.fxml'.";
-        assert Lecturas != null : "fx:id=\"Lecturas\" was not injected: check your FXML file 'lectura1.fxml'.";
 
     }
 
