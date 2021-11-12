@@ -24,11 +24,6 @@ import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 
 public class Discusion {
-
-    public Discusion(String value) {
-        usuarioTxt.setText(value);
-    }
-
     @FXML
     private ResourceBundle resources;
 
@@ -86,7 +81,7 @@ public class Discusion {
         LocalDate date = LocalDate.now(clock);
         
         if(!comentarioTxt.getText().isEmpty() && !comentarioTxt.getText().isBlank()) {
-            ComentariosForo comentario = new ComentariosForo("PJMA1111", comentarioTxt.getText(), date);
+            ComentariosForo comentario = new ComentariosForo("gua1234", comentarioTxt.getText(), date);
             if(comentario.insertarComentario()) {
                 ObservableList<ComentariosForo> items = comentario.getComentarios();
                 this.tableId.setItems(items);
@@ -135,7 +130,7 @@ public class Discusion {
     void onPressIniciarSesion(ActionEvent event) {
 	try
         {
-            Parent root = FXMLLoader.load(getClass().getResource("login.fxml"));
+            Parent root = FXMLLoader.load(getClass().getResource("paginainicial.fxml"));
             Stage stage0 = (Stage) iniciarSesion1.getScene().getWindow();
             Stage stage1 = new Stage();
             stage0.close();
@@ -148,7 +143,17 @@ public class Discusion {
 
     @FXML
     void onPressLecturas(ActionEvent event) {
-
+        try
+        {
+            Parent root = FXMLLoader.load(getClass().getResource("lecprincipal.fxml"));
+            Stage stage0 = (Stage) Lecturas1.getScene().getWindow();
+            Stage stage1 = new Stage();
+            stage0.close();
+            stage1.setScene(new Scene(root));
+            stage1.show();
+        }catch(Exception e){
+            System.out.println("algo fallo: "+e.getMessage());
+        }
     }
 
     @FXML
@@ -181,23 +186,7 @@ public class Discusion {
     }
 
     @FXML
-    void initialize() throws IOException {
-        assert Actividades1 != null : "fx:id=\"Actividades1\" was not injected: check your FXML file 'discusion.fxml'.";
-        assert Lecturas1 != null : "fx:id=\"Lecturas1\" was not injected: check your FXML file 'discusion.fxml'.";
-        assert Salir != null : "fx:id=\"Salir\" was not injected: check your FXML file 'discusion.fxml'.";
-        assert agregarBtn != null : "fx:id=\"agregarBtn\" was not injected: check your FXML file 'discusion.fxml'.";
-        assert comentarioSelecTxt != null : "fx:id=\"comentarioSelecTxt\" was not injected: check your FXML file 'discusion.fxml'.";
-        assert comentarioTabla != null : "fx:id=\"comentarioTabla\" was not injected: check your FXML file 'discusion.fxml'.";
-        assert comentarioTxt != null : "fx:id=\"comentarioTxt\" was not injected: check your FXML file 'discusion.fxml'.";
-        assert fechaTabla != null : "fx:id=\"fechaTabla\" was not injected: check your FXML file 'discusion.fxml'.";
-        assert iniciarSesion1 != null : "fx:id=\"iniciarSesion1\" was not injected: check your FXML file 'discusion.fxml'.";
-        assert instituciones != null : "fx:id=\"instituciones\" was not injected: check your FXML file 'discusion.fxml'.";
-        assert nuevoBtn != null : "fx:id=\"nuevoBtn\" was not injected: check your FXML file 'discusion.fxml'.";
-        assert tableId != null : "fx:id=\"tableId\" was not injected: check your FXML file 'discusion.fxml'.";
-        assert uSelecTxt != null : "fx:id=\"uSelecTxt\" was not injected: check your FXML file 'discusion.fxml'.";
-        assert usuarioTabla != null : "fx:id=\"usuarioTabla\" was not injected: check your FXML file 'discusion.fxml'.";
-        assert usuarioTxt != null : "fx:id=\"usuarioTxt\" was not injected: check your FXML file 'discusion.fxml'.";
-	
+    void initialize() throws IOException {        	
 	    this.fechaTabla.setCellValueFactory(new PropertyValueFactory("fecha"));
         this.usuarioTabla.setCellValueFactory(new PropertyValueFactory("nombre"));
         this.comentarioTabla.setCellValueFactory(new PropertyValueFactory("comentario"));

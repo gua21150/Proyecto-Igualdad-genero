@@ -19,7 +19,7 @@
                </image>
             </ImageView>
             <Button fx:id="iniciarSesion" graphicTextGap="10.0" layoutX="14.0" layoutY="30.0" mnemonicParsing="false" onAction="#onPressIniciarSesion" text="Iniciar Sesión" />
-            <Button fx:id="Actividades" layoutX="115.0" layoutY="31.0" mnemonicParsing="false" onAction="#onPressActividades" text="Actividades" />
+            <Button fx:id="Actividades" layoutX="115.0" layoutY="30.0" mnemonicParsing="false" onAction="#onPressActividades" prefHeight="26.0" prefWidth="82.0" text="Foro" />
             <Button fx:id="Lecturas" layoutX="209.0" layoutY="31.0" mnemonicParsing="false" onAction="#onPressLecturas" text="Lecturas" />
             <Button fx:id="Salir" layoutX="383.0" layoutY="31.0" mnemonicParsing="false" onAction="#onPressSalir" text="Salir/Cerrar Sesión" />
             <Button fx:id="instituciones" layoutX="286.0" layoutY="30.0" mnemonicParsing="false" onAction="#oninstituciones" text="Instituciones" />

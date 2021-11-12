@@ -23,11 +23,11 @@
                         <Image url="@Blanco%20con%20Ícono%20de%20Flor%20Logo%20(1).png" />
                      </image>
                   </ImageView>
-                  <Button fx:id="iniciarSesion1" graphicTextGap="10.0" layoutX="31.0" layoutY="33.0" mnemonicParsing="false" onAction="#onPressIniciarSesion" text="Iniciar Sesión" />
-                  <Button fx:id="Actividades1" layoutX="132.0" layoutY="34.0" mnemonicParsing="false" onAction="#onPressActividades" text="Actividades" />
-                  <Button fx:id="Lecturas1" layoutX="226.0" layoutY="34.0" mnemonicParsing="false" onAction="#onPressLecturas" text="Lecturas" />
-                  <Button fx:id="Salir" layoutX="398.0" layoutY="34.0" mnemonicParsing="false" onAction="#onPressSalir" text="Salir/Cerrar Sesión" />
-                  <Button fx:id="instituciones" layoutX="303.0" layoutY="34.0" mnemonicParsing="false" onAction="#oninstituciones" text="Instituciones" />
+                  <Button fx:id="iniciarSesion1" graphicTextGap="10.0" layoutX="40.0" layoutY="34.0" mnemonicParsing="false" onAction="#onPressIniciarSesion" text="Inicio" />
+                  <Button fx:id="Actividades1" layoutX="117.0" layoutY="34.0" mnemonicParsing="false" onAction="#onPressActividades" text="Foro" />
+                  <Button fx:id="Lecturas1" layoutX="189.0" layoutY="34.0" mnemonicParsing="false" onAction="#onPressLecturas" text="Lecturas" />
+                  <Button fx:id="Salir" layoutX="376.0" layoutY="34.0" mnemonicParsing="false" onAction="#onPressSalir" text="Salir/Cerrar Sesión" />
+                  <Button fx:id="instituciones" layoutX="269.0" layoutY="34.0" mnemonicParsing="false" onAction="#oninstituciones" text="Instituciones" />
                </children>
             </AnchorPane>
             <SplitPane prefHeight="160.0" prefWidth="200.0">
