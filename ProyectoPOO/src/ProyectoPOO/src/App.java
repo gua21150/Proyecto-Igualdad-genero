@@ -24,4 +24,5 @@ public class App extends Application {
             System.out.println("algo fallo: "+e.getMessage());
         }
     }
+    
 }
