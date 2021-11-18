@@ -1,5 +1,10 @@
 package ProyectoPOO.src;
 
+import java.io.IOException;
+import java.net.URI;
+import java.awt.Desktop;
+import java.net.URISyntaxException;
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -53,5 +58,11 @@ public class Lecturas1 {
     void OnLectura1(ActionEvent event) {
 
     }
+
+    @FXML
+    void Onclick1(ActionEvent event) throws URISyntaxException, IOException {
+        Desktop.getDesktop().browse(new URI("https://scielo.isciii.es/scielo.php?script=sci_arttext&pid=S1132-05592006000200004"));
+    }
+
 
 }

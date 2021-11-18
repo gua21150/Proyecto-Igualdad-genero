@@ -1,5 +1,10 @@
 package ProyectoPOO.src;
 
+import java.io.IOException;
+import java.net.URI;
+import java.net.URISyntaxException;
+import java.awt.Desktop;
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -50,7 +55,13 @@ public class Lectura5 {
     }
 
     @FXML
-    void OnLecturas(ActionEvent event) {
+    void OnActividad(ActionEvent event) throws URISyntaxException, IOException {
+            Desktop.getDesktop().browse(new URI("https://es.educaplay.com/recursos-educativos/10887297-videoquiz_igualdad_de_genero.html"));
+    }
+
+    @FXML
+    void Onclickl5(ActionEvent event) throws URISyntaxException, IOException {
+        Desktop.getDesktop().browse(new URI("https://www.un.org/sustainabledevelopment/es/wp-content/uploads/sites/3/2016/10/5_Spanish_Why_it_Matters.pdf"));
 
     }
 
