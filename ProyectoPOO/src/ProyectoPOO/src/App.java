@@ -19,7 +19,7 @@ public class App extends Application {
             stage.show();
         }catch(Exception e)
         {
-            System.out.println("algo fallo: "+e.getMessage());
+            System.out.println("Se ha producido el siguiente fallo: "+e.getMessage());
         }
     }
 }

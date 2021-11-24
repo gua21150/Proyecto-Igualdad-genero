@@ -3,7 +3,7 @@ package ProyectoPOO.src;
 import java.io.IOException;
 import java.sql.SQLException;
 import java.util.ArrayList;
-import java.util.Scanner;
+
 /**
  * El objetivo de esta clase es mantener la integridad de los datos del modelo MVC.
  * Todos sus métodos son de tipo static porque no se instancian objetos de esta clase.
@@ -119,8 +119,7 @@ public class Controlador{
             credenciales.add(new Credenciales(user, password, question, answer)); // creación de credencial
             usuariosRegistrados.add(new Usuario(nombre, telef, correo, credenciales.get(credenciales.size()-1))); // creación de usuario
             // hacer actualizacion de escritura de datos
-            //archivo.Escritura(usuariosRegistrados);
-            //archivo.EscrituraCredenciales(credenciales);                        
+            /*archivo.Escritura(usuariosRegistrados);  archivo.EscrituraCredenciales(credenciales);*/                       
             if(archivo.registerUser(nombre, telef, correo)) {
                 archivo.registerCredencial(correo, user, password, question, answer); // realizacion del query en basedatos
                 System.out.println("Usuario correctamente creado");
@@ -141,20 +140,20 @@ public class Controlador{
      * @throws IOException error en la conexion con la base de datos
      */
     public static boolean iniciarSesion(String usuario, String password) throws IOException, SQLException {
-        boolean match = false;
+        boolean match = false;        
         cargarDatos(); // en caso que se haya hecho una actualización en el archivo, se actualizan los datos actuales.
         for (Credenciales credenciales2 : credenciales) {
-            if(credenciales2.getUsername().equals(usuario)) {
-                if (credenciales2.getPassword().equals(password)) {
-                    System.out.println("Hola " + credenciales2.getUsername() + ", es bueno verte de nuevo");
-                    match = true;                 
-                    break;
-                }
-                //tiene que redireccionar a recuperar contraseña si lo elige el usuario
+            if(credenciales2.getUsername().equals(usuario) && credenciales2.getPassword().equals(password)) 
+            {
+                System.out.println("Hola " + credenciales2.getUsername() + ", es bueno verte de nuevo");
+                user = credenciales2.getUsername(); // permitirá obtener el nombre de quien se ha iniciado sesión
+                match = true;                 
+                break;
             }
+            //tiene que redireccionar a recuperar contraseña si lo elige el usuario
+            
         }
-        if(match == false)
-        {
+        if(match == false) {
             System.out.println("No existe el usuario o la contraseña es inválida");
         }
         return match;
@@ -210,14 +209,15 @@ public class Controlador{
         cargarDatos();
         for(Credenciales credenciales2: credenciales)
         {
-            if(credenciales2.getQuestion().equals(pregunta))
-            {
-                if(credenciales2.getAnswer().equals(respuesta))
-                {
-                    correcto = "respuesta correcta, escriba su nueva contraseña";
-                }
+            if(credenciales2.getQuestion().equals(pregunta) && credenciales2.getAnswer().equals(respuesta))
+            {                
+                correcto = "respuesta correcta, escriba su nueva contraseña";                
             }
         }
         return correcto;
+    }
+
+    public static String usuarioEnLinea() {
+        return user;
     }
 }

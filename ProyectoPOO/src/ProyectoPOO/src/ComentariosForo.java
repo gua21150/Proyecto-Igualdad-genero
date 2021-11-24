@@ -70,12 +70,12 @@ public class ComentariosForo {
         Connection conection = conectionBase.RealizarConexion();
         try{
             Statement statement = conection.createStatement(); // realiza la conexion a la base de datos
-            String fecha = this.getFecha().getYear() + "-" + this.getFecha().getMonthValue() + "-" + this.getFecha().getDayOfMonth(); // se seleciona la fecha con este formato         
+            String fechaIngreso = this.getFecha().getYear() + "-" + this.getFecha().getMonthValue() + "-" + this.getFecha().getDayOfMonth(); // se seleciona la fecha con este formato         
             // este es el query para insertar en la tabla comentariosforo
             String sql = "INSERT INTO comentariosforo (username, comentario, fecha) VALUES ('"
                         +this.getNombre()+"','"
                         +this.getComentario()+"','"
-                        +fecha+"');";   
+                        +fechaIngreso+"');";   
             statement.executeUpdate(sql); // ejecuta el query 
             statement.close();    // cierra el query
             value = true;  // si pudo hacer el cambio entonces lo agrega    
