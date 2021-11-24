@@ -4,7 +4,6 @@ import java.io.IOException;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.awt.Desktop;
-
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -57,13 +56,10 @@ public class Lectura2 {
     @FXML
     void OnActividad(ActionEvent event) throws URISyntaxException, IOException {
         Desktop.getDesktop().browse(new URI("https://www.oxfam.org/es/dia-internacional-de-la-mujer-haz-el-test-y-ayudanos-luchar-contra-la-desigualdad-de-genero"));
-
     }
 
     @FXML
     void Onclickl2(ActionEvent event) throws URISyntaxException, IOException {
         Desktop.getDesktop().browse(new URI("https://www.accionenredmadrid.org/wp-content/uploads/2016/09/TODOS-DEBER%C3%8DAMOS-SER-FEMINISTAS.pdf"));
-
     }
-
 }
