@@ -1,7 +1,6 @@
 package ProyectoPOO.src;
 
 import java.util.Scanner;
-
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -24,5 +23,4 @@ public class App extends Application {
             System.out.println("algo fallo: "+e.getMessage());
         }
     }
-    
 }
