@@ -33,8 +33,8 @@ public class Lectura3 {
             stage0.close();
             stage1.setScene(new Scene(root));
             stage1.show();
-        } catch(Exception e){
-            System.out.println("algo fallo: "+e.getCause());
+        }catch(Exception e){
+            System.out.println("Se ha producido el siguiente fallo: "+e.getCause());
         }
     }
 
@@ -47,10 +47,10 @@ public class Lectura3 {
             Stage stage1 = new Stage();
             stage0.close();
             stage1.setScene(new Scene(root));
-            stage1.show();
-        } catch(Exception e){
-            System.out.println("algo fallo: "+e.getCause());
-        }        
+            stage1.show();}
+        catch(Exception e){
+            System.out.println("Se ha producido el siguiente fallo: "+e.getCause());
+        }     
     }
 
     @FXML
@@ -69,7 +69,7 @@ public class Lectura3 {
             stage1.setScene(new Scene(root));
             stage1.show();
         }catch(Exception e){
-            System.out.println("algo fallo: "+e.getCause());
+            System.out.println("Se ha producido el siguiente fallo: "+e.getCause());
         }
     }
 

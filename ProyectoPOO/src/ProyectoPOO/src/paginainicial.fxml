@@ -33,9 +33,9 @@
                   <Font name="Segoe UI Semibold Italic" size="13.0" />
                </font>
             </Text>
-            <TextArea layoutX="424.0" layoutY="53.0" prefHeight="146.0" prefWidth="150.0" text="Valores:&#10;-Amor&#10;-Respeto &#10;-Igualdad" />
-            <TextArea layoutX="14.0" layoutY="60.0" prefHeight="148.0" prefWidth="200.0" text="Visión:  &#10;Ser una fuente de informa&#10;ción que le habrá los ojos a los &#10;usuarios sobre la importancia de &#10;las mujeres en la sociedad guate&#10;malteca para que sean vistas &#10;como iguales de los hombres " />
-            <TextArea layoutX="224.0" layoutY="57.0" prefHeight="151.0" prefWidth="194.0" text="Misión:&#10;Disminuir la discriminación que &#10;sufren las mujeres para &#10;lograr que se desmpeñen en&#10;cualquiera de las áreas &#10;profesionales en fin de que &#10;tengan cualquier libertad." />
+            <TextArea editable="false" layoutX="424.0" layoutY="48.0" prefHeight="150.0" prefWidth="150.0" text="Valores:&#10;-Amor&#10;-Respeto &#10;-Igualdad" />
+            <TextArea editable="false" layoutX="14.0" layoutY="49.0" prefHeight="148.0" prefWidth="200.0" text="Visión:  &#10;Ser una fuente de informa&#10;ción que le habrá los ojos a los &#10;usuarios sobre la importancia de &#10;las mujeres en la sociedad guate&#10;malteca para que sean vistas &#10;como iguales de los hombres " />
+            <TextArea editable="false" layoutX="221.0" layoutY="47.0" prefHeight="151.0" prefWidth="194.0" text="Misión:&#10;Disminuir la discriminación que &#10;sufren las mujeres para &#10;lograr que se desmpeñen en&#10;cualquiera de las áreas &#10;profesionales en fin de que &#10;tengan cualquier libertad." />
             <ImageView fitHeight="90.0" fitWidth="161.0" layoutX="46.0" layoutY="215.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@vision.jpeg" />

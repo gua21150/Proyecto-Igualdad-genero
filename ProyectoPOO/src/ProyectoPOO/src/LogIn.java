@@ -56,7 +56,7 @@ public class LogIn {
                 stage1.setScene(new Scene(root));
                 stage1.show();
             }catch(Exception e){
-                System.out.println("algo fallo: "+e.getMessage());
+                System.out.println("Se ha producido el siguiente fallo "+e.getMessage());
             }
         }else{
             contraseña.clear();
@@ -75,7 +75,7 @@ public class LogIn {
             stage1.setScene(new Scene(root));
             stage1.show();
         }catch(Exception e){
-            System.out.println("algo fallo: "+e.getMessage());
+            System.out.println("Se ha producido el siguiente fallo "+e.getMessage());
         }
     }
 
@@ -90,7 +90,7 @@ public class LogIn {
             stage1.setScene(new Scene(root));
             stage1.show();
         }catch(Exception e){
-            System.out.println("algo fallo: "+e.getMessage());
+            System.out.println("Se ha producido el siguiente fallo "+e.getMessage());
         }
     }
 

@@ -34,7 +34,7 @@ public class Lectura2 {
             stage1.setScene(new Scene(root));
             stage1.show();
         }catch(Exception e){
-            System.out.println("algo fallo: "+e.getCause());
+            System.out.println("Se ha producido el siguiente fallo: "+e.getCause());
         }
     }
 
@@ -49,7 +49,7 @@ public class Lectura2 {
             stage1.setScene(new Scene(root));
             stage1.show();
         }catch(Exception e){
-            System.out.println("algo fallo: "+e.getCause());
+            System.out.println("Se ha producido el siguiente fallo: "+e.getCause());
         }
     }
 
@@ -69,7 +69,7 @@ public class Lectura2 {
             stage1.setScene(new Scene(root));
             stage1.show();
         }catch(Exception e){
-            System.out.println("algo fallo: "+e.getCause());
+            System.out.println("Se ha producido el siguiente fallo: "+e.getCause());
         }
     }
 

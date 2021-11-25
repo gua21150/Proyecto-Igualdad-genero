@@ -34,23 +34,22 @@ public class Lectura4 {
             stage1.setScene(new Scene(root));
             stage1.show();
         } catch(Exception e){
-            System.out.println("algo fallo: "+e.getCause());
+            System.out.println("Se ha producido el siguiente fallo: "+e.getCause());
         }
     }
 
     @FXML
     void OnInicio(ActionEvent event) {
-        try
-        {
+        try {
             Parent root = FXMLLoader.load(getClass().getResource("paginainicial.fxml"));
             Stage stage0 = (Stage)  Inicio.getScene().getWindow();
             Stage stage1 = new Stage();
             stage0.close();
             stage1.setScene(new Scene(root));
             stage1.show();
-        } catch(Exception e){
-            System.out.println("algo fallo: "+e.getCause());
-        }
+        }catch(Exception e){
+            System.out.println("Se ha producido el siguiente fallo: "+e.getCause());
+        } 
     }
 
     @FXML
@@ -69,7 +68,7 @@ public class Lectura4 {
             stage1.setScene(new Scene(root));
             stage1.show();
         }catch(Exception e){
-            System.out.println("algo fallo: "+e.getCause());
+            System.out.println("Se ha producido el siguiente fallo: "+e.getCause());
         }
     }
 
