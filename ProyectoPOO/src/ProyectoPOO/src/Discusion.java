@@ -87,7 +87,7 @@ public class Discusion {
                 Alert alert = new Alert(Alert.AlertType.INFORMATION);
                 alert.setHeaderText(null);
                 alert.setTitle("Exito");
-                alert.setContentText("Se incerto correctamente el comentario");
+                alert.setContentText("Se incertó correctamente el comentario");
                 alert.showAndWait();
             } else {
                 Alert alert = new Alert(Alert.AlertType.ERROR);
@@ -189,5 +189,10 @@ public class Discusion {
         ObservableList<ComentariosForo> items = comentario.getComentarios();
         this.tableId.setItems(items);
         this.usuarioTxt.setText(Controlador.usuarioEnLinea());        
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setHeaderText(null);
+        alert.setTitle("Información");
+        alert.setContentText("En el cuadro de cuentanos tu historia, dinos ¿qué te ha parecido las lecturas?\n¿Cómo estuvo tu día?");    
+        alert.showAndWait();
     }
 }
