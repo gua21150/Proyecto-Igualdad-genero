@@ -8,6 +8,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
@@ -39,6 +40,11 @@ public class LogIn {
     void onCancelarClick(ActionEvent event) {
         contraseña.clear();
         usuario.clear();
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setHeaderText(null);
+        alert.setTitle("Bye");
+        alert.setContentText("¡Adiós, te esperamos pronto!");
+        alert.showAndWait();
         Platform.exit();
     }
 
@@ -49,6 +55,11 @@ public class LogIn {
             usuario.clear();
             try
             {
+                Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                alert.setHeaderText(null);
+                alert.setTitle("Bienvenido");
+                alert.setContentText("¡Hola "+Controlador.usuarioEnLinea()+" es bueno verte de nuevo!");
+                alert.showAndWait();
                 Parent root = FXMLLoader.load(getClass().getResource("paginainicial.fxml"));
                 Stage stage0 = (Stage) ingresar.getScene().getWindow();
                 Stage stage1 = new Stage();
@@ -59,6 +70,11 @@ public class LogIn {
                 System.out.println("Se ha producido el siguiente fallo "+e.getMessage());
             }
         }else{
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setHeaderText(null);
+            alert.setTitle("No fue posible iniciar sesión");
+            alert.setContentText("Usuario y/o contraseña incorrecta/inexistente");
+            alert.showAndWait();
             contraseña.clear();
             usuario.clear();
         }

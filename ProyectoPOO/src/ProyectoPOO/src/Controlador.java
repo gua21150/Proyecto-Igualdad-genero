@@ -114,21 +114,25 @@ public class Controlador{
     public static boolean registrarUsuarios(String correo, String nombre, String telef, String user, String password, String question, String answer) throws SQLException, IOException {
         boolean exitoso = false;
         cargarDatos(); // se cargan los datos a las listas creadas
-        if(!validarUsuario(correo)){
-            // valida que el correo no esté repetido, de no estar repetido, solicitará el resto de datos
-            credenciales.add(new Credenciales(user, password, question, answer)); // creación de credencial
-            usuariosRegistrados.add(new Usuario(nombre, telef, correo, credenciales.get(credenciales.size()-1))); // creación de usuario
-            // hacer actualizacion de escritura de datos
-            /*archivo.Escritura(usuariosRegistrados);  archivo.EscrituraCredenciales(credenciales);*/                       
-            if(archivo.registerUser(nombre, telef, correo)) {
-                archivo.registerCredencial(correo, user, password, question, answer); // realizacion del query en basedatos
-                System.out.println("Usuario correctamente creado");
-                exitoso = true;
+        String[] array = {correo, nombre, telef, user, password, question, answer};
+        if(ControladorDatos.isString(array))
+        {
+            if(!validarUsuario(correo)){
+                // valida que el correo no esté repetido, de no estar repetido, solicitará el resto de datos
+                credenciales.add(new Credenciales(user, password, question, answer)); // creación de credencial
+                usuariosRegistrados.add(new Usuario(nombre, telef, correo, credenciales.get(credenciales.size()-1))); // creación de usuario
+                // hacer actualizacion de escritura de datos
+                /*archivo.Escritura(usuariosRegistrados);  archivo.EscrituraCredenciales(credenciales);*/                       
+                if(archivo.registerUser(nombre, telef, correo)) {
+                    archivo.registerCredencial(correo, user, password, question, answer); // realizacion del query en basedatos
+                    System.out.println("Usuario correctamente creado");
+                    exitoso = true;
+                } else {
+                    System.out.println("Ha habido un error con la creacion del usuario");
+                }
             } else {
-                System.out.println("Ha habido un error con la creacion del usuario");
+                System.out.println("Lo sentimos ese correo ya está asociado a una cuenta.\nIntenta con otro correo o iniciar sesión");
             }
-        } else {
-            System.out.println("Lo sentimos ese correo ya está asociado a una cuenta.\nIntenta con otro correo o iniciar sesión");
         }
         return exitoso;    
     }
@@ -176,7 +180,8 @@ public class Controlador{
             {
                 if(credenciales2.getQuestion().equals(pregunta))
                 {
-                    if(ControladorDatos.isString(nuevopassword))
+                    String[] string = {nuevopassword};
+                    if(ControladorDatos.isString(string))
                     {
                         credenciales2.setPassword(nuevopassword);
                         archivo.cambiarContra(nuevopassword, credenciales2.getUsername());
