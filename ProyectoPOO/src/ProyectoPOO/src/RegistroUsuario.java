@@ -8,6 +8,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
@@ -63,6 +64,11 @@ public class RegistroUsuario {
         {
             try
             {
+                Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                alert.setHeaderText(null);
+                alert.setTitle("Registro Exitoso");
+                alert.setContentText("El usuario se registró con éxito\nRegresando a inicio de sesión");
+                alert.showAndWait();
                 Parent root = FXMLLoader.load(getClass().getResource("login.fxml"));
                 Stage stage0 = (Stage) cancelar.getScene().getWindow();
                 Stage stage1 = new Stage();
@@ -72,6 +78,12 @@ public class RegistroUsuario {
             }catch(Exception e){
                 System.out.println("Se ha producido el siguiente fallo "+e.getMessage());
             }
+        }else{
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setHeaderText(null);
+            alert.setTitle("Error");
+            alert.setContentText("No se pudo crear el Usuario");
+            alert.showAndWait();
         }
     }
 

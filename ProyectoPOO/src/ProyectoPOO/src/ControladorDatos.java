@@ -17,13 +17,16 @@ public class ControladorDatos {
      * @param value String que evalua para verificar que el dato es correcto
      * @return true: si el dato cumple con la especificación, false: si el dato no cumple con la especificación
      */
-    public static boolean isString(String value) {    
-        boolean correcto = false;   // variable booleana donde se guarda la actualización del dato
-        if(value.isBlank() || value.isEmpty()) {
-            correcto = false;       // valida que el dato no esté en blanco o contenga solo espacios en blanco 
-        } else {
-            correcto = true;        // cambia el valor a true si cumple con las especificaciones
-        } 
+    public static boolean isString(String[] value) {    
+        boolean correcto = false;  // variable booleana donde se guarda la actualización del dato
+        for (String string : value) {
+            if(string.isBlank() || string.isEmpty()) {
+                correcto = false;
+                break;      // valida que el dato no esté en blanco o contenga solo espacios en blanco 
+            } else {
+                correcto = true;        // cambia el valor a true si cumple con las especificaciones
+            } 
+        }
         return correcto;
     }
 
@@ -39,25 +42,7 @@ public class ControladorDatos {
         } catch (NumberFormatException e) {
             return false;
         }
-    }
-    
-    /**
-     * Solicitara el dato al usuario hasta que el usuario ingrese el dato con parámetros correctos.
-     * @param pregunta: ¿Qué dato desea obtener el usuario?
-     * @return dato: respuesta del usuario
-     */
-    public static String solicitarString(String pregunta, Scanner scanner) {        
-        String dato;                              // variable que guarda el String de respuesta
-        boolean continuar = true;                 // bandera para continuar o no con el proceso 
-        do{            
-            System.out.println(pregunta); // registro de la pregunta generada
-            dato = scanner.nextLine();    // obtención del dato
-            if(isString(dato)){ 
-                continuar = false; // valida que el dato esté corecto, si lo está entonces deberá de parar el ciclo while.              
-            }
-        } while(continuar);         // ciclo para pedir el mismo dato hasta que cumple la especificaciones
-        return dato;                // retorno del dato validado.
-    }    
+    }  
 
      /**
      * Solicitara el dato al usuario hasta que el usuario ingrese el dato con parámetros correctos (datos de tipo entero).

@@ -103,7 +103,7 @@
    <center>
       <AnchorPane prefHeight="351.0" prefWidth="600.0" BorderPane.alignment="CENTER">
          <children>
-            <Label graphicTextGap="10.0" layoutX="179.0" layoutY="42.0" text="Nombre">
+            <Label graphicTextGap="10.0" layoutX="119.0" layoutY="42.0" text="Nombre Completo">
                <font>
                   <Font size="13.0" />
                </font>
@@ -123,9 +123,9 @@
                   <Font size="13.0" />
                </font>
             </Label>
-            <Label graphicTextGap="10.0" layoutX="173.0" layoutY="185.0" text="Contraseña" />
-            <Label graphicTextGap="10.0" layoutX="106.0" layoutY="218.0" text="Pregunta de seguridad" />
-            <Label graphicTextGap="10.0" layoutX="173.0" layoutY="252.0" text="Respuesta">
+            <Label graphicTextGap="10.0" layoutX="165.0" layoutY="185.0" text="Contraseña" />
+            <Label graphicTextGap="10.0" layoutX="104.0" layoutY="218.0" text="Pregunta de seguridad" />
+            <Label graphicTextGap="10.0" layoutX="165.0" layoutY="252.0" text="Respuesta">
                <font>
                   <Font size="13.0" />
                </font>

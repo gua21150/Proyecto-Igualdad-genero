@@ -8,6 +8,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
 
@@ -57,6 +58,11 @@ public class paginainicial {
 
     @FXML
     void onPressSalir(ActionEvent event) {
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setHeaderText(null);
+        alert.setTitle("Sesión cerrada exitosamente");
+        alert.setContentText("¡Gracias por ser parte de esta comunidad!\n¡Te esperamos pronto!");
+        alert.showAndWait();
         Platform.exit();
     }
 
