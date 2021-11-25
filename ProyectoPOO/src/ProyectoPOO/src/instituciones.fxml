@@ -28,9 +28,9 @@
                   <Image url="@../../../../../../../Downloads/Blanco%20con%20Ícono%20de%20Flor%20Logo%20(1).png" />
                </image>
             </ImageView>
-            <Button fx:id="actividades" graphicTextGap="10.0" layoutX="128.0" layoutY="39.0" mnemonicParsing="false" onAction="#Onactividades" text="Foro" />
+            <Button fx:id="actividades" graphicTextGap="10.0" layoutX="118.0" layoutY="39.0" mnemonicParsing="false" onAction="#Onactividades" text="Foro" />
             <Button fx:id="lecturas" layoutX="189.0" layoutY="39.0" mnemonicParsing="false" onAction="#Onlecturas" text="Lecturas" />
-            <Button fx:id="principal" layoutX="36.0" layoutY="39.0" mnemonicParsing="false" onAction="#Onprincipal" text="Principal" />
+            <Button fx:id="principal" layoutX="42.0" layoutY="39.0" mnemonicParsing="false" onAction="#Onprincipal" text="Inicio" />
          </children>
       </AnchorPane>
       <Text layoutX="206.0" layoutY="125.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Instituciones de Ayuda" wrappingWidth="158.13671875">

@@ -20,12 +20,14 @@
                <children>
                   <ImageView fitHeight="85.0" fitWidth="95.0" layoutX="594.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../../../../../../GitHub/Proyecto-Igualdad-genero/ProyectoPOO/src/ProyectoPOO/src/Blanco%20con%20Ícono%20de%20Flor%20Logo%20(1).png" />
+                        <Image url="@Blanco%20con%20Ícono%20de%20Flor%20Logo%20(1).png" />
                      </image>
                   </ImageView>
-                  <Button fx:id="iniciarSesion" graphicTextGap="10.0" layoutX="57.0" layoutY="36.0" mnemonicParsing="false" onAction="#onPressIniciarSesion" text="Iniciar Sesión" />
-                  <Button fx:id="Actividades" layoutX="233.0" layoutY="36.0" mnemonicParsing="false" onAction="#onPressActividades" text="Actividades" />
-                  <Button fx:id="Lecturas" layoutX="415.0" layoutY="36.0" mnemonicParsing="false" onAction="#onPressLecturas" text="Lecturas" />
+                  <Button fx:id="iniciarSesion1" graphicTextGap="10.0" layoutX="14.0" layoutY="34.0" minHeight="15.0" minWidth="15.0" mnemonicParsing="false" onAction="#onPressIniciarSesion" prefWidth="100.0" text="Inicio" />
+                  <Button fx:id="Actividades1" layoutX="126.0" layoutY="34.0" minHeight="15.0" minWidth="15.0" mnemonicParsing="false" onAction="#onPressActividades" prefWidth="100.0" text="Foro" />
+                  <Button fx:id="Lecturas1" layoutX="234.0" layoutY="34.0" minHeight="15.0" minWidth="15.0" mnemonicParsing="false" onAction="#onPressLecturas" prefWidth="100.0" text="Lecturas" />
+                  <Button fx:id="Salir" layoutX="455.0" layoutY="34.0" minHeight="15.0" minWidth="15.0" mnemonicParsing="false" onAction="#onPressSalir" prefHeight="26.0" prefWidth="128.0" text="Salir/Cerrar Sesión" />
+                  <Button fx:id="instituciones" layoutX="344.0" layoutY="34.0" minHeight="15.0" minWidth="15.0" mnemonicParsing="false" onAction="#oninstituciones" prefWidth="100.0" text="Instituciones" />
                </children>
             </AnchorPane>
             <SplitPane prefHeight="160.0" prefWidth="200.0">

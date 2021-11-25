@@ -56,6 +56,20 @@ public class Lectura2 {
     @FXML
     void OnActividad(ActionEvent event) throws URISyntaxException, IOException {
         Desktop.getDesktop().browse(new URI("https://www.oxfam.org/es/dia-internacional-de-la-mujer-haz-el-test-y-ayudanos-luchar-contra-la-desigualdad-de-genero"));
+    
+    @FXML
+    void OnLecturas(ActionEvent event) {
+        try
+        {
+            Parent root = FXMLLoader.load(getClass().getResource("lecprincipal.fxml"));
+            Stage stage0 = (Stage)  Lecturas.getScene().getWindow();
+            Stage stage1 = new Stage();
+            stage0.close();
+            stage1.setScene(new Scene(root));
+            stage1.show();
+        }catch(Exception e){
+            System.out.println("algo fallo: "+e.getCause());
+        }
     }
 
     @FXML

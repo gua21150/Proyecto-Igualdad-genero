@@ -43,7 +43,7 @@ public class instituciones {
     void Onlecturas(ActionEvent event) throws IOException{
         try
         {
-            Parent root = FXMLLoader.load(getClass().getResource("paginainicial.fxml"));
+            Parent root = FXMLLoader.load(getClass().getResource("lecprincipal.fxml"));
             Stage stage0 = (Stage) lecturas.getScene().getWindow();
             Stage stage1 = new Stage();
             stage0.close();

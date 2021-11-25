@@ -56,6 +56,20 @@ public class Lectura5 {
     @FXML
     void OnActividad(ActionEvent event) throws URISyntaxException, IOException {
             Desktop.getDesktop().browse(new URI("https://es.educaplay.com/recursos-educativos/10887297-videoquiz_igualdad_de_genero.html"));
+  
+    @FXML
+    void OnLecturas(ActionEvent event) {
+        try
+        {
+            Parent root = FXMLLoader.load(getClass().getResource("lecprincipal.fxml"));
+            Stage stage0 = (Stage)  Lecturas.getScene().getWindow();
+            Stage stage1 = new Stage();
+            stage0.close();
+            stage1.setScene(new Scene(root));
+            stage1.show();
+        }catch(Exception e){
+            System.out.println("algo fallo: "+e.getCause());
+        }
     }
 
     @FXML
