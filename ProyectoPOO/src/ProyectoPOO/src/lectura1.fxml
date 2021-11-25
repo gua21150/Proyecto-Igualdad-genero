@@ -40,8 +40,8 @@
    <bottom>
       <Pane prefHeight="42.0" prefWidth="600.0" style="-fx-background-color: indigo;" BorderPane.alignment="CENTER">
          <children>
-            <Label layoutX="14.0" layoutY="13.0" text="Referencia: Asamblea Feminista de Madrid. (2006). Feminismo: un movimiento crítico. Scielo, 6." textFill="#ece1e1" />
-            <Hyperlink layoutX="527.0" layoutY="10.0" onAction="#Onclick1" text="Leer" textFill="#f2eeee" />
+            <Label layoutX="14.0" layoutY="13.0" text="Referencia: Asamblea Feminista de Madrid. (2006). Feminismo: un movimiento crític..." textFill="#ece1e1" />
+            <Hyperlink layoutX="480.0" layoutY="10.0" onAction="#Onclick1" text="Continuar Leyendo" textFill="#f2eeee" underline="true" />
          </children>
       </Pane>
    </bottom>

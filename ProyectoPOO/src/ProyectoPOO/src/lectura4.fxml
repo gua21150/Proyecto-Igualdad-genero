@@ -27,8 +27,8 @@
    <bottom>
       <Pane prefHeight="38.0" prefWidth="600.0" style="-fx-background-color: MEDIUMPURPLE;" BorderPane.alignment="CENTER">
          <children>
-            <Label layoutX="14.0" layoutY="11.0" text="eferencias : ONU. (2015). Igualdad de género: Por qué es importante? Organización de las Naciones ..." textFill="#eee9e9" />
-            <Hyperlink layoutX="555.0" layoutY="7.0" onAction="#OnClickl4" text="Leer" textFill="WHITE" />
+            <Label layoutX="14.0" layoutY="11.0" text="Referencias : ONU. (2015). Igualdad de género: Por qué es importante? Organización  ...." textFill="#eee9e9" />
+            <Hyperlink layoutX="484.0" layoutY="7.0" onAction="#OnClickl4" text="Continuar Leyendo" textFill="WHITE" underline="true" />
          </children>
       </Pane>
    </bottom>

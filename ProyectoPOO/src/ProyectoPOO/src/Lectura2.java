@@ -57,7 +57,7 @@ public class Lectura2 {
     void OnActividad(ActionEvent event) throws URISyntaxException, IOException {
         Desktop.getDesktop().browse(new URI("https://www.oxfam.org/es/dia-internacional-de-la-mujer-haz-el-test-y-ayudanos-luchar-contra-la-desigualdad-de-genero"));
     }
-    
+
     @FXML
     void OnLecturas(ActionEvent event) {
         try

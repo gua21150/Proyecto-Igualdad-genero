@@ -56,7 +56,7 @@ public class Lectura4 {
     void OnActividad(ActionEvent event) throws URISyntaxException, IOException {
         Desktop.getDesktop().browse(new URI("https://es.educaplay.com/recursos-educativos/10887227-crucigrama_igualdad_de_genero.html"));
     }
-    
+
     @FXML
     void OnLecturas(ActionEvent event) {
         try
