@@ -5,7 +5,6 @@ import java.net.URL;
 import java.time.Clock;
 import java.time.LocalDate;
 import java.util.ResourceBundle;
-
 import javafx.application.Platform;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -77,23 +76,24 @@ public class Discusion {
 
     @FXML
     void agregar(ActionEvent event) throws IOException {
-	    Clock clock = Clock.systemUTC();
+	    Clock clock = Clock.systemUTC();        
         LocalDate date = LocalDate.now(clock);    
         if(!comentarioTxt.getText().isEmpty() && !comentarioTxt.getText().isBlank()) {
-            ComentariosForo comentario = new ComentariosForo("PJMA1111", comentarioTxt.getText(), date);            
+            
+            ComentariosForo comentario = new ComentariosForo(usuarioTxt.getText(), comentarioTxt.getText(), date);            
             if(comentario.insertarComentario()) {
                 ObservableList<ComentariosForo> items = comentario.getComentarios();
                 this.tableId.setItems(items);
                 Alert alert = new Alert(Alert.AlertType.INFORMATION);
                 alert.setHeaderText(null);
                 alert.setTitle("Exito");
-                alert.setContentText("Se incerto correctamente el comentario");
+                alert.setContentText("Se incertó correctamente el comentario");
                 alert.showAndWait();
             } else {
                 Alert alert = new Alert(Alert.AlertType.ERROR);
                 alert.setHeaderText(null);
                 alert.setTitle("Error");
-                alert.setContentText("No se inserto correctamente el comentario");
+                alert.setContentText("No se insertó correctamente el comentario");
                 alert.showAndWait();
             }
         } else {
@@ -120,7 +120,7 @@ public class Discusion {
             stage1.setScene(new Scene(root));
             stage1.show();
         }catch(Exception e){
-            System.out.println("algo fallo: "+e.getMessage());
+            System.out.println("Se ha producido el siguiente fallo: "+e.getMessage());
         }
     }
 
@@ -134,7 +134,7 @@ public class Discusion {
         stage1.setScene(new Scene(root));
         stage1.show();
         }catch(Exception e){
-            System.out.println("algo fallo: "+e.getMessage());
+            System.out.println("Se ha producido el siguiente fallo "+e.getMessage());
         }
     }
 
@@ -148,7 +148,7 @@ public class Discusion {
             stage1.setScene(new Scene(root));
             stage1.show();
         } catch(Exception e){
-            System.out.println("algo fallo: "+e.getMessage());
+            System.out.println("Se ha producido el siguiente fallo "+e.getMessage());
         }
     }
 
@@ -159,22 +159,21 @@ public class Discusion {
 
     @FXML
     void oninstituciones(ActionEvent event) {
-        try
-        {
+        try {
             Parent root = FXMLLoader.load(getClass().getResource("instituciones.fxml"));
             Stage stage0 = (Stage) instituciones.getScene().getWindow();
             Stage stage1 = new Stage();
             stage0.close();
             stage1.setScene(new Scene(root));
             stage1.show();
-        }catch(Exception e){
-            System.out.println("algo fallo: "+e.getMessage());
+        } catch(Exception e){
+            System.out.println("Se ha producido el siguiente fallo "+e.getMessage());
         }
     }
 
     @FXML
     void seleccionar(MouseEvent event) {
-	ComentariosForo comentario = this.tableId.getSelectionModel().getSelectedItem();
+	    ComentariosForo comentario = this.tableId.getSelectionModel().getSelectedItem();
         if(comentario!=null) {
             this.uSelecTxt.setText(comentario.getNombre());
             this.comentarioSelecTxt.setText(comentario.getComentario());
@@ -182,13 +181,18 @@ public class Discusion {
     }
 
     @FXML
-    void initialize() throws IOException {        
+    void initialize() throws IOException {              
 	    this.fechaTabla.setCellValueFactory(new PropertyValueFactory("fecha"));
         this.usuarioTabla.setCellValueFactory(new PropertyValueFactory("nombre"));
         this.comentarioTabla.setCellValueFactory(new PropertyValueFactory("comentario"));
         ComentariosForo comentario = new ComentariosForo();
         ObservableList<ComentariosForo> items = comentario.getComentarios();
         this.tableId.setItems(items);
-        this.usuarioTxt.setText("PJMA1111");
+        this.usuarioTxt.setText(Controlador.usuarioEnLinea());        
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setHeaderText(null);
+        alert.setTitle("Información");
+        alert.setContentText("En el cuadro de cuentanos tu historia, dinos ¿qué te ha parecido las lecturas?\n¿Cómo estuvo tu día?");    
+        alert.showAndWait();
     }
 }

@@ -34,7 +34,7 @@ public class Lectura5 {
             stage1.setScene(new Scene(root));
             stage1.show();
         }catch(Exception e){
-            System.out.println("algo fallo: "+e.getCause());
+            System.out.println("Se ha producido el siguiente fallo: "+e.getCause());
         }
     }
 
@@ -49,7 +49,7 @@ public class Lectura5 {
             stage1.setScene(new Scene(root));
             stage1.show();
         }catch(Exception e){
-            System.out.println("algo fallo: "+e.getCause());
+            System.out.println("Se ha producido el siguiente fallo: "+e.getCause());
         }
     }
 
@@ -57,6 +57,7 @@ public class Lectura5 {
     void OnActividad(ActionEvent event) throws URISyntaxException, IOException {
             Desktop.getDesktop().browse(new URI("https://es.educaplay.com/recursos-educativos/10887297-videoquiz_igualdad_de_genero.html"));
     }
+
     @FXML
     void OnLecturas(ActionEvent event) {
         try
@@ -68,7 +69,7 @@ public class Lectura5 {
             stage1.setScene(new Scene(root));
             stage1.show();
         }catch(Exception e){
-            System.out.println("algo fallo: "+e.getCause());
+            System.out.println("Se ha producido el siguiente fallo: "+e.getCause());
         }
     }
 

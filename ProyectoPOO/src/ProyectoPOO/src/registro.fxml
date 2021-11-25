@@ -76,7 +76,7 @@
                   </LinearGradient>
                </fill>
             </Text>
-            <Text layoutX="167.0" layoutY="68.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bienvenido a nuestra comunidad!">
+            <Text layoutX="167.0" layoutY="68.0" strokeType="OUTSIDE" strokeWidth="0.0" text="¡Bienvenido a nuestra comunidad!">
                <font>
                   <Font size="18.0" />
                </font>
@@ -108,7 +108,7 @@
                   <Font size="13.0" />
                </font>
             </Label>
-            <Label graphicTextGap="10.0" layoutX="177.0" layoutY="74.0" text="Telefono">
+            <Label graphicTextGap="10.0" layoutX="177.0" layoutY="74.0" text="Teléfono">
                <font>
                   <Font size="13.0" />
                </font>
@@ -124,7 +124,7 @@
                </font>
             </Label>
             <Label graphicTextGap="10.0" layoutX="173.0" layoutY="185.0" text="Contraseña" />
-            <Label graphicTextGap="10.0" layoutX="176.0" layoutY="218.0" text="Pregunta " />
+            <Label graphicTextGap="10.0" layoutX="106.0" layoutY="218.0" text="Pregunta de seguridad" />
             <Label graphicTextGap="10.0" layoutX="173.0" layoutY="252.0" text="Respuesta">
                <font>
                   <Font size="13.0" />

@@ -33,14 +33,14 @@
             <Button fx:id="principal" layoutX="42.0" layoutY="39.0" mnemonicParsing="false" onAction="#Onprincipal" text="Inicio" />
          </children>
       </AnchorPane>
-      <Text layoutX="206.0" layoutY="125.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Instituciones de Ayuda" wrappingWidth="158.13671875">
+      <Text disable="true" layoutX="206.0" layoutY="125.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Instituciones de Ayuda" wrappingWidth="158.13671875">
          <font>
             <Font name="System Bold Italic" size="14.0" />
          </font>
       </Text>
-      <TextArea layoutX="14.0" layoutY="149.0" prefHeight="170.0" prefWidth="200.0" text="CAIMUS es un lugar seguro y &#10;confiable donde las mujeres que&#10;sufren o han sufrido violencia &#10;encuentra apoyo, información y &#10;asesoría. Estos servicios se &#10;proporcionan sin ningún costo,&#10;requisito o condiciones.&#10;Para mayor informacion presione&#10;el link abajo." />
-      <TextArea layoutX="390.0" layoutY="140.0" prefHeight="170.0" prefWidth="208.0" text="Asociación Miriam es una &#10;institución que empodera a las&#10;mujeres indígenas a través de &#10;un modelo integral de atención&#10;para su incorporación en la &#10;economía del país y su &#10;participación activa como &#10;agentes de cambio.&#10;Presione el link abajo." />
-      <TextArea layoutX="130.0" layoutY="346.0" prefHeight="110.0" prefWidth="342.0" text="El Instituto de la víctima es el ente rector de las políticas &#10;victimólogicas en Guatemala, y la institución encargada&#10;de brindar asistencia y atención a las víctimas del delito.&#10;Para más información presione el botón por debajo." />
+      <TextArea editable="false" layoutX="14.0" layoutY="149.0" prefHeight="170.0" prefWidth="200.0" text="CAIMUS es un lugar seguro y &#10;confiable donde las mujeres que&#10;sufren o han sufrido violencia &#10;encuentra apoyo, información y &#10;asesoría. Estos servicios se &#10;proporcionan sin ningún costo,&#10;requisito o condiciones.&#10;Para mayor informacion presione&#10;el link abajo." />
+      <TextArea editable="false" layoutX="390.0" layoutY="140.0" prefHeight="170.0" prefWidth="208.0" text="Asociación Miriam es una &#10;institución que empodera a las&#10;mujeres indígenas a través de &#10;un modelo integral de atención&#10;para su incorporación en la &#10;economía del país y su &#10;participación activa como &#10;agentes de cambio.&#10;Presione el link abajo." />
+      <TextArea editable="false" layoutX="130.0" layoutY="346.0" prefHeight="110.0" prefWidth="342.0" text="El Instituto de la víctima es el ente rector de las políticas &#10;victimólogicas en Guatemala, y la institución encargada&#10;de brindar asistencia y atención a las víctimas del delito.&#10;Para más información presione el botón por debajo." />
       <Hyperlink layoutX="65.0" layoutY="319.0" onAction="#onlink1" text="CAIMUS" />
       <Hyperlink layoutX="435.0" layoutY="320.0" onAction="#onlink2" text="AsociacionMiriam" />
       <Hyperlink layoutX="-182.0" layoutY="76.0" text="Hyperlink" />
